@@ -1,0 +1,35 @@
+{
+  "name": "extrabhp-ui",
+  "version": "1.0.0",
+  "description": "Extra BHP",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/tdwaik/extrabhp-ui.git"
+  },
+  "keywords": [
+    "ExtraBHP"
+  ],
+  "author": "Thaer Aldwaik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/tdwaik/extrabhp-ui/issues"
+  },
+  "homepage": "https://gitlab.com/tdwaik/extrabhp-ui#README",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^1.8.9",
+    "gulp-less": "^3.3.2",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}

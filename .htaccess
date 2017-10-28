@@ -1,0 +1,26 @@
+Options +FollowSymLinks
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www.extrabhp.com
+#RewriteRule (.*) http://extrabhp.com/$1 [R=301,L,NC]
+RewriteRule (.*) http://extrabhp.com [R=301,L,NC,QSA]
+
+RewriteCond %{REQUEST_URI} ^/notFound$
+RewriteRule ^(.*)$ / [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5})$
+RewriteRule ^(.*)$ / [L,QSA]
+
+# Allow indexing img only for Google, Yahoo and MSN
+#RewriteCond %{HTTP_REFERER} .
+#RewriteCond %{HTTP_REFERER} !^http[|s]://(.*)extrabhp.com [NC]
+#RewriteCond %{HTTP_REFERER} !google. [NC]
+#RewriteCond %{HTTP_REFERER} !search?q=cache [NC]
+#RewriteCond %{HTTP_REFERER} !msn. [NC]
+#RewriteCond %{HTTP_REFERER} !yahoo. [NC]
+#RewriteCond %{REQUEST_URI} !^/img/hotlink.jpg$
+#RewriteRule (.+)\.(gif|jpg|png|jpeg)$ /img/hotlink.jpg [NC,L]
