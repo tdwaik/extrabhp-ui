@@ -8,10 +8,15 @@ var uglify = require('gulp-uglify');
 var ngmin = require('gulp-ngmin');
 var concat = require('gulp-concat');
 var pkg = require('./package.json');
+var mode = require('gulp-mode')({
+    modes: ["prod", "dev"],
+    default: "dev",
+    verbose: false
+});
+var isProduction = mode.prod();
 
-// Set the banner content
 var banner = ['/*!\n',
-    ' * Thaer Aldwaik - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+    ' * Thaer Aldwaik - <%= pkg.title %> v<%= pkg.version %>\n',
     ' * Copyright ' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' * Licensed under <%= pkg.license %>)\n',
     ' */\n',

@@ -1,6 +1,6 @@
 {
   "name": "extrabhp-ui",
-  "version": "1.0.0",
+  "version": "1.0.0.pre-alpha",
   "description": "Extra BHP",
   "main": "gulpfile.js",
   "scripts": {
@@ -28,8 +28,10 @@
     "gulp-concat": "^2.6.1",
     "gulp-header": "^1.8.9",
     "gulp-less": "^3.3.2",
+    "gulp-mode": "^1.0.2",
     "gulp-ngmin": "^0.3.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
     "gulp-uglify": "^1.5.4"
   }
 }
