@@ -2,7 +2,7 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-var APIEndPoint = 'http://localhost:8080';
+var APIEndPoint = 'http://extrabhp.com:8080';
 
 app.service('API', ['$http', function($http) {
 	return {
