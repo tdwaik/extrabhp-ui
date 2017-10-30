@@ -18,7 +18,7 @@ var isProduction = mode.prod();
 var banner = ['/*!\n',
     ' * Thaer Aldwaik - <%= pkg.title %> v<%= pkg.version %>\n',
     ' * Copyright ' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license %>)\n',
+    ' * Licensed under <%= pkg.license %>\n',
     ' */\n',
     ''
 ].join('');
