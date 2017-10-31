@@ -1,6 +1,6 @@
 {
   "name": "extrabhp-ui",
-  "version": "1.0.0.pre-alpha",
+  "version": "1.0.0",
   "description": "Extra BHP",
   "main": "gulpfile.js",
   "scripts": {

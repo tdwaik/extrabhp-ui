@@ -39,16 +39,24 @@
                                     <h3>Does this answer helpful ?</h3>
                                     <div ng-if="isHelpful.loading" class="loader-small"></div>
                                     <div ng-if="!isHelpful.loading">
-                                        <a class="btn btn-default btn-xl" ng-click="isHelpful.send(1)">Yes</a>
-                                        <a class="btn btn-default btn-xl" ng-click="isHelpful.send(0)">No!</a>
+                                        <a class="btn btn-default btn-l" ng-click="isHelpful.send(1)">Yes</a>
+                                        <a class="btn btn-default btn-l" ng-click="isHelpful.send(0)">No!</a>
                                     </div>
                                 </div>
 
+                                <div ng-if="feedback.show">
+                                    <p>Any feedback is appreciated?</p>
+                                    <div ng-if="feedback.loading" class="loader-small"></div>
+                                    <div ng-if="!feedback.loading">
+                                        <textarea class="form-control" ng-model="feedback.value" placeholder="Any Feedback?"></textarea>
+                                        <input type="button" value="send" class="btn btn-default btn-l" ng-click="feedback.send()" />
+                                    </div>
+                                </div>
+
+                                <div ng-if="showThanks"><p>Thanks!</p></div>
+
                                 <br />
                                 <a class="btn btn-default btn-xl" ng-click="tryAgain()">Start Again</a>
-                                <p>Any feedback is appreciated?</p>
-                                <textarea placeholder="Optional Feedback"></textarea>
-                                <input type="button" value="send" />
                             </div>
                         </div>
                     </div>
