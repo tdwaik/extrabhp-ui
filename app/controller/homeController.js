@@ -69,4 +69,13 @@ app.controller('homeController', ['$scope', 'alerts', 'whatCarService', function
         $scope.init();
     };
 
+    $scope.isHelpful = {
+        "show": true,
+        "loading": false,
+        "send": function (isHelpful) {
+            $scope.isHelpful.loading = true;
+            // TODO send feedback
+        }
+    };
+
 }]);

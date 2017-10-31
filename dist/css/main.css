@@ -1,7 +1,7 @@
 /*!
  * Thaer Aldwaik -  v1.0.0.pre-alpha
  * Copyright 2017 Thaer Aldwaik
- * Licensed under ISC)
+ * Licensed under ISC
  */
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
@@ -345,16 +345,6 @@ footer ul li a:active,
 footer ul li a.active {
   text-decoration: none;
 }
-@media (max-width: 500px) {
-  .quote-banner .h2 {
-    font-size: 50%;
-  }
-}
-@media (max-width: 1000px) {
-  .quote-banner .h2 {
-    font-size: 80%;
-  }
-}
 .quote-banner {
   background-color: #f44d3c;
   padding: 40px 0;
@@ -424,6 +414,16 @@ body {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  animation: spin 1s linear infinite;
+}
+.loader-small {
+  border: 3px solid #f3f3f3;
+  /* Light grey */
+  border-top: 3px solid #f44d3c;
+  /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   animation: spin 1s linear infinite;
 }
 @keyframes spin {
