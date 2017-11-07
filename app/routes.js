@@ -12,11 +12,11 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             templateUrl: '/assets/view/petrolhead101View.html',
             controller: 'petrolhead101Controller'
         })
-        .when('/notFound', {
+        .when('/404', {
             templateUrl: '/assets/view/404.html'
         })
         .otherwise({
-            redirectTo: '/notFound'
+            templateUrl: '/assets/view/404.html'
         });
 
     // configure html5 to get links working on jsfiddle
