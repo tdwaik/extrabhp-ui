@@ -3,7 +3,7 @@ Options -Indexes
 
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^www\.extrabhp\.com [NC]
+RewriteCond %{HTTP_HOST} ^.*\.extrabhp\.com [NC]
 RewriteRule ^(.*) http://extrabhp.com [R=301,L,QSA]
 
 RewriteCond %{REQUEST_URI} ^\/less\/.*|^\/app\/.*|^\/\..*|^\/gulpfile.js|^\/package.json|^\/package-lock.json
