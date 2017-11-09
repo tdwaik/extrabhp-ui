@@ -3,14 +3,6 @@
  */
 
 app.controller('homeController', ['$scope', '$timeout', 'alerts', 'whatCarService', function($scope, $timeout, alerts, whatCarService) {
-
-    $scope.answers = [];
-    $scope.question = null;
-    $scope.result = null;
-    $scope.checkboxModel = {};
-    $scope.loading = true;
-    $scope.showThanks = false;
-
     var whatCarLogId = null;
 
     $scope.getQuestion = function () {
@@ -60,21 +52,18 @@ app.controller('homeController', ['$scope', '$timeout', 'alerts', 'whatCarServic
     };
 
     $scope.init = function() {
-        $scope.answers = [];
+        $scope.answers = {};
         $scope.question = null;
         $scope.result = null;
         $scope.checkboxModel = {};
         $scope.loading = true;
-
         $scope.isHelpful.show = true;
         $scope.isHelpful.loading = false;
-
         $scope.feedback.show = false;
         $scope.feedback.loading = false;
         $scope.feedback.value = null;
-
         $scope.showThanks = false;
-
+        whatCarLogId = null;
         $scope.getQuestion();
     };
 
@@ -116,6 +105,19 @@ app.controller('homeController', ['$scope', '$timeout', 'alerts', 'whatCarServic
                 alerts.oops();
             });
         }
+    };
+
+    $scope.back = function() {
+        var lastKey = null;
+        angular.forEach($scope.answers, function(value, key) {
+            lastKey = key;
+        });
+        delete $scope.answers[lastKey];
+        $scope.getQuestion();
+    };
+
+    $scope.showBack = function() {
+        return JSON.stringify($scope.answers) !== JSON.stringify({});
     }
 
 }]);

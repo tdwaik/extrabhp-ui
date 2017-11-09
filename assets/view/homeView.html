@@ -27,6 +27,10 @@
                                     </span>
                                     <a class="btn btn-default btn-xl" ng-if="getCheckedBoxesValue() != ''" ng-click="submitCheckboxModel(question.name)">Next</a>
                                 </span>
+
+                                <span ng-if="showBack()">
+                                    <a class="btn btn-default btn-xl" ng-click="back()">Back</a>
+                                </span>
                             </div>
 
                         </div>
