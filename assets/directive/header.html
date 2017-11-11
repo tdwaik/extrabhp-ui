@@ -1,45 +1,33 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="/">Extra BHP</a><sub> Pre-alpha</sub>
+            <a class="navbar-brand page-scroll" href="/">Extra <span data-toggle="tooltip" title="Brake Horsepower" data-placement="bottom">BHP</span></a><sub> Pre-alpha</sub>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="/petrolhead-101">Petrolhead 101</a>
+                    <a class="page-scroll" href="/petrolhead-101">Petrolhead <span class="text-primary">101</span></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="" data-toggle="modal" data-target="#myModal">Contact</a>
+                    <a class="page-scroll generalModal" href="" data-modal="contactUs">Contact</a>
                 </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
-
-    <!--<div class="alerts" ng-if="alerts.length > 0">-->
-        <!--<div class="row" ng-repeat="alert in alerts track by $index">-->
-            <!--<div class="col-md-12 global-messages">-->
-                <!--<div class="alert alert-{{alert.type}}">-->
-                    <!--<a ng-click="closeAlert($index)" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
-                    <!--<strong>{{alert.icn}}</strong> {{alert.message}}-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
 </nav>
 
 <script>
-    (function($) {
-        "use strict";
+    "use strict";
 
+    $(document).ready(function(){
         // Highlight the top nav as scrolling occurs
         $('body').scrollspy({
             target: '.navbar-fixed-top',
@@ -51,12 +39,21 @@
             $('.navbar-toggle:visible').click();
         });
 
-        // Offset for Main Navigation
-        $('#mainNav').affix({
-            offset: {
-                top: 50
-            }
-        })
+        // // Offset for Main Navigation
+        // $('#mainNav').affix({
+        //     offset: {
+        //         top: 50
+        //     }
+        // });
 
-    })(jQuery);
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('.generalModal').click(function () {
+            var modalFileName = $(this).data('modal');
+            $.get('/assets/modal/' + modalFileName + '.html', function( data ) {
+                $("#generalModalContent").html(data);
+                $("#generalModal").modal("show");
+            });
+        });
+    });
 </script>

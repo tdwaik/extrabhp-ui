@@ -1,69 +1,45 @@
-<div class="container p-0">
+<div class="container petrolhead-101">
 
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <div class="row col-xs-12">
         <div class="my-auto">
-            <h1 class="mb-0">Petrolhead
-                <span class="text-primary">101</span>
-            </h1>
-            <!--<div class="subheading mb-5">The first step to stop being a human! and become a Petrolhead</div>-->
-            <p class="mb-5">
-                The first step to stop being Human and become a Petrolhead
-                <!--<br />Here you will find some pref general information about cars-->
-            </p>
-            <div class="subheading mb-3">This page will have updates frequently</div>
-            <!--<ul class="list-inline list-social-icons mb-0">-->
-                <!--<li class="list-inline-item">-->
-                    <!--<a href="#">-->
-                <!--<span class="fa-stack fa-lg">-->
-                  <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                  <!--<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>-->
-                <!--</span>-->
-                    <!--</a>-->
-                <!--</li>-->
-                <!--<li class="list-inline-item">-->
-                    <!--<a href="#">-->
-                <!--<span class="fa-stack fa-lg">-->
-                  <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                  <!--<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>-->
-                <!--</span>-->
-                    <!--</a>-->
-                <!--</li>-->
-                <!--<li class="list-inline-item">-->
-                    <!--<a href="#">-->
-                <!--<span class="fa-stack fa-lg">-->
-                  <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                  <!--<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>-->
-                <!--</span>-->
-                    <!--</a>-->
-                <!--</li>-->
-                <!--<li class="list-inline-item">-->
-                    <!--<a href="#">-->
-                <!--<span class="fa-stack fa-lg">-->
-                  <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                  <!--<i class="fa fa-github fa-stack-1x fa-inverse"></i>-->
-                <!--</span>-->
-                    <!--</a>-->
-                <!--</li>-->
-            <!--</ul>-->
+            <h2 class="mb-0">Petrolhea <span class="text-primary">101</span></h2>
+            <h4 class="mb-5">The first step to stop being Human and become a Petrolhead!</h4>
+            <h6><sup>*</sup> This page will have updates frequently</h6>
         </div>
-    </section>
+    </div>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-            <h1 class="mb-5">Internal Combustion Engine</h1>
+    <div class="row col-xs-12">
+        <h3 class="mb-5">Cars you must know about</h3>
 
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <!--<h3 class="mb-0">Senior Web Developer</h3>-->
-                    <div class="subheading mb-3">From Wikipedia</div>
-                    <p>An internal combustion engine (ICE) is a heat engine where the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit. In an internal combustion engine, the expansion of the high-temperature and high-pressure gases produced by combustion applies direct force to some component of the engine. The force is applied typically to pistons, turbine blades, rotor or a nozzle. This force moves the component over a distance, transforming chemical energy into useful mechanical energy.</p>
+        <div class="col-lg-4 col-sm-6 portfolio" ng-repeat="info in mustKnow">
+            <a class="portfolio-box">
+                <img class="img-fluid" ng-src="{{info.img}}" alt="" />
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">{{info.subTitle}}</div>
+                        <div class="project-name">{{info.title}}</div>
+                    </div>
                 </div>
-                <div class="resume-date text-md-right">
-                    More: <span class="text-primary"><a target="_blank" href="https://en.wikipedia.org/wiki/Internal_combustion_engine">https://en.wikipedia.org/wiki/Internal_combustion_engine</a></span>
-                </div>
-            </div>
-
+            </a>
         </div>
-    </section>
+
+    </div>
+
+    <!--<div class="row col-xs-12">-->
+        <!--<div class="my-auto">-->
+            <!--<h1 class="mb-5">Internal Combustion Engine</h1>-->
+
+            <!--<div class="resume-item d-flex flex-column flex-md-row mb-5">-->
+                <!--<div class="resume-content mr-auto">-->
+                    <!--<div class="subheading mb-3">From Wikipedia</div>-->
+                    <!--<p>An internal combustion engine (ICE) is a heat engine where the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit. In an internal combustion engine, the expansion of the high-temperature and high-pressure gases produced by combustion applies direct force to some component of the engine. The force is applied typically to pistons, turbine blades, rotor or a nozzle. This force moves the component over a distance, transforming chemical energy into useful mechanical energy.</p>-->
+                <!--</div>-->
+                <!--<div class="resume-date text-md-right">-->
+                    <!--More: <span class="text-primary"><a target="_blank" href="https://en.wikipedia.org/wiki/Internal_combustion_engine">https://en.wikipedia.org/wiki/Internal_combustion_engine</a></span>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
 
 </div>

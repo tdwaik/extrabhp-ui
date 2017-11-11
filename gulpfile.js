@@ -47,7 +47,7 @@ gulp.task('minify-css', ['less'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    gulp.src(['app/**/**/**/**'])
+    gulp.src(['app/*.js', 'app/**/**/**/**'])
         .pipe(uglify({dynamic: false}))
         .pipe(concat('dist/js/extrabhp.min.js'))
         .pipe(header(banner, { pkg: pkg }))

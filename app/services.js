@@ -3,6 +3,7 @@
  */
 
 var APIEndPoint = 'http://extrabhp.com:8080';
+var UIEndPoint = 'http://dev.extrabhp.com';
 
 app.service('API', ['$http', function($http) {
 	return {
@@ -15,6 +16,19 @@ app.service('API', ['$http', function($http) {
 			});
 		}
 	}
+}]);
+
+app.service('UI', ['$http', function($http) {
+    return {
+        call: function(method, url, data, headers) {
+            return $http({
+                method: method,
+                url: UIEndPoint + url,
+                data: data,
+                headers: headers
+            });
+        }
+    }
 }]);
 
 app.service('whatCarService', ['API', function(API) {
@@ -30,5 +44,11 @@ app.service('whatCarService', ['API', function(API) {
         var jsonRequest = {"whatCarLogId": whatCarLogId, "feedback": feedback};
         var headers = {"Content-Type": "application/json"};
         return API.call('post', '/whatCar/feedback', JSON.stringify(jsonRequest), headers);
+    };
+}]);
+
+app.service('UIService', ['UI', function(UI) {
+    this.getModal = function(modalFileName) {
+        return UI.call('get', '/assets/modal/' + modalFileName + '.html');
     };
 }]);
