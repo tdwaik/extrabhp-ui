@@ -3,9 +3,9 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="/">Extra <span data-toggle="tooltip" title="Brake Horsepower" data-placement="bottom">BHP</span></a><sub> Pre-alpha</sub>
+            <a class="navbar-brand page-scroll" href="/">Extra BHP</a><sub> Pre-alpha</sub>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,37 +23,3 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-
-<script>
-    "use strict";
-
-    $(document).ready(function(){
-        // Highlight the top nav as scrolling occurs
-        $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 100
-        });
-
-        // Closes the Responsive Menu on Menu Item Click
-        $('.navbar-collapse ul li a').click(function() {
-            $('.navbar-toggle:visible').click();
-        });
-
-        // // Offset for Main Navigation
-        // $('#mainNav').affix({
-        //     offset: {
-        //         top: 50
-        //     }
-        // });
-
-        $('[data-toggle="tooltip"]').tooltip();
-
-        $('.generalModal').click(function () {
-            var modalFileName = $(this).data('modal');
-            $.get('/assets/modal/' + modalFileName + '.html', function( data ) {
-                $("#generalModalContent").html(data);
-                $("#generalModal").modal("show");
-            });
-        });
-    });
-</script>

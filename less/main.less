@@ -11,6 +11,8 @@
 body {
     .body-font;
     padding-top: 50px;
+    background-color: #000;
+    color: #fff;
 }
 //
 //a {
@@ -49,8 +51,12 @@ h6 {
 //
 // Navigation
 
+.navbar-nav > li > a {padding-top:11px !important; padding-bottom:11px !important;}
+.navbar {min-height:32px !important}
+.navbar-brand {height: auto; padding: 11px 15px;}
+
 .navbar-default {
-    background-color: #191919;
+    background-color: #000;
     color: #FFF;
     border-color: fade(@gray-darker, 5%);
     .transition-all;
@@ -65,9 +71,10 @@ h6 {
         }
     }
     .navbar-header .navbar-toggle {
-        font-size: 12px;
+        font-size: 20px;
         color: #FFF !important;
-        padding: 8px 10px;
+        padding: 0;
+        border: none;
     }
     .navbar-toggle:focus {
         background-color: #191919;
@@ -148,6 +155,7 @@ header {
     //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
     //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     //background: url("/img/bg/5e487c8509d8586866427ea4d165e5f8.jpg") center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    //background: url("http://eskipaper.com/images/mclaren-4.jpg") center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     //color: #FFF;
     .header-content {
@@ -156,7 +164,7 @@ header {
         position: relative;
         .header-content-inner {
             position: relative;
-            max-width: 500px;
+            //max-width: 500px;
             margin: 0 auto;
             //h1 {
             //    margin-top: 0;
@@ -182,13 +190,13 @@ header {
     @media (min-width: 768px) {
         min-height: 95%;
         .header-content {
-            text-align: left;
+            //text-align: left;
             padding: 0;
-            height: 90vh;
+            height: 82vh;
             .header-content-inner {
                 max-width: none;
                 margin: 0;
-                position: absolute;
+                //position: absolute;
                 top: 40%;
                 transform: translateY(-50%);
                 //h1 {
@@ -373,7 +381,7 @@ header {
 //}
 
 footer {
-    background-color: @gray-darker;
+    //background-color: @gray-darker;
     padding: 10px 0;
     color: fade(#FFF, 30%);
     //text-align: center;
@@ -383,9 +391,9 @@ footer {
     }
 }
 .quote-banner {
-    background-color: @theme-primary;
+    //background-color: #F7F7F7;
     padding: 20px 0 15px 0;
-    color: #FFF;
+    //color: #333;
     .quote {
         font-size: 18px;
         font-weight: bold;
@@ -396,7 +404,7 @@ footer {
         li {
             a {
                 font-size: 12px;
-                color: #FFF;
+                color: #333;
                 &:hover,
                 &:focus,
                 &:active,
@@ -441,13 +449,13 @@ footer {
 }
 
 .btn {
-    .alt-font;
+    //.alt-font;
     border-radius: 300px;
 }
 
 .btn-xl {
-    padding: 13px 40px;
-    font-size: 12px;
+    padding: 10px 30px;
+    //font-size: 12px;
 }
 
 //// Extras
@@ -563,4 +571,8 @@ footer {
 }
 .petrolhead-101 .row {
     margin-bottom: 10px;
+}
+
+.modal {
+    color: #000;
 }

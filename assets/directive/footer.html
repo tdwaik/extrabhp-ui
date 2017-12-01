@@ -1,28 +1,29 @@
 <div class="quote-banner">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 quote">
+			<div class="col-xs-12 col-sm-6 quote">
 				"Life's too short to drive a slow car"
-				<br />
-				<a href="https://www.facebook.com/extrabhp/" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-				</a>
 			</div>
-			<div class="col-md-6">
-				<ul class="list-inline mbr-text navbar-right">
-					<li><p class="mbr-text align-right links mbr-fonts-style display-7">
-						<a href="/">Home</a></p>
-					</li>
-					<li><p class="mbr-text align-right links mbr-fonts-style display-7">
-						<a href="/petrolhead-101">Petrolhead 101</a></p>
-					</li>
-					<li><p class="mbr-text align-right links mbr-fonts-style display-7">
-						<a href="" data-toggle="modal" data-target="#generalModal" ng-click="generalModal('contactUs')">Contact</a></p>
-					</li>
-				</ul>
+			<div class="col-xs-12 col-sm-6 text-right">
+
+				<a href="https://www.facebook.com/extrabhp/" target="_blank">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+
+				<!--<ul class="list-inline mbr-text navbar-right">-->
+					<!--<li><p class="mbr-text align-right links mbr-fonts-style display-7">-->
+						<!--<a href="/">Home</a></p>-->
+					<!--</li>-->
+					<!--<li><p class="mbr-text align-right links mbr-fonts-style display-7">-->
+						<!--<a href="/petrolhead-101">Petrolhead 101</a></p>-->
+					<!--</li>-->
+					<!--<li><p class="mbr-text align-right links mbr-fonts-style display-7">-->
+						<!--<a class="page-scroll generalModal" href="" data-modal="contactUs">Contact</a>-->
+					<!--</li>-->
+				<!--</ul>-->
 			</div>
 		</div>
 	</div>
@@ -40,3 +41,37 @@
 		</div>
 	</div>
 </footer>
+
+<script>
+    "use strict";
+
+    $(document).ready(function(){
+        // Highlight the top nav as scrolling occurs
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 100
+        });
+
+        // Closes the Responsive Menu on Menu Item Click
+        $('.navbar-collapse ul li a').click(function() {
+            $('.navbar-toggle:visible').click();
+        });
+
+        // // Offset for Main Navigation
+        // $('#mainNav').affix({
+        //     offset: {
+        //         top: 50
+        //     }
+        // });
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('.generalModal').click(function () {
+            var modalFileName = $(this).data('modal');
+            $.get('/assets/modal/' + modalFileName + '.html', function( data ) {
+                $("#generalModalContent").html(data);
+                $("#generalModal").modal("show");
+            });
+        });
+    });
+</script>

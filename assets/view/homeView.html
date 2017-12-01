@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="row" ng-init="init()">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
                 <div class="header-content">
                     <div class="header-content-inner">
                         <!--<h1>The Best Car for you from a Petrolhead view:</h1>-->
@@ -11,7 +11,11 @@
                         <div ng-if="result == null">
                             <h3>{{question.question}}</h3>
 
-                            <div ng-if="loading == true" class="loader"></div>
+                            <div ng-if="loading == true">
+                                <ul class="list-inline intro-social-buttons">
+                                    <li><div class="loader"></div></li>
+                                </ul>
+                            </div>
                             <div ng-if="loading == false">
                                 <span ng-if="question.type != 'multiple_choice'">
                                     <ul class="list-inline intro-social-buttons">
@@ -35,13 +39,21 @@
 
                         </div>
                         <div ng-if="result != null">
-                            <div ng-if="loading == true" class="loader"></div>
+                            <div ng-if="loading == true">
+                                <ul class="list-inline intro-social-buttons">
+                                    <li><div class="loader"></div></li>
+                                </ul>
+                            </div>
                             <div ng-if="loading == false">
                                 <h3>{{result}}</h3>
 
                                 <div ng-if="isHelpful.show" class="is-helpfull">
                                     <h3>Does this answer helpful ?</h3>
-                                    <div ng-if="isHelpful.loading" class="loader-small"></div>
+                                    <div ng-if="isHelpful.loading">
+                                        <ul class="list-inline intro-social-buttons">
+                                            <li><div class="loader-small"></div></li>
+                                        </ul>
+                                    </div>
                                     <div ng-if="!isHelpful.loading">
                                         <a class="btn btn-default btn-l" ng-click="isHelpful.send(1)">Yes</a>
                                         <a class="btn btn-default btn-l" ng-click="isHelpful.send(0)">No!</a>
@@ -50,10 +62,16 @@
 
                                 <div ng-if="feedback.show">
                                     <p>Any feedback is appreciated?</p>
-                                    <div ng-if="feedback.loading" class="loader-small"></div>
-                                    <div ng-if="!feedback.loading">
-                                        <textarea class="form-control" ng-model="feedback.value" placeholder="Any Feedback?"></textarea>
-                                        <input type="button" value="send" class="btn btn-default btn-l" ng-click="feedback.send()" />
+                                    <div ng-if="feedback.loading">
+                                        <ul class="list-inline intro-social-buttons">
+                                            <li><div class="loader-small"></div></li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <form name="feedbackForm" class="col-md-6 col-md-offset-3" ng-if="!feedback.loading" ng-submit="feedback.send()">
+                                            <textarea class="form-control" ng-model="feedback.value" placeholder="Any Feedback?" required></textarea>
+                                            <input type="submit" value="Send" class="btn btn-default btn-l" />
+                                        </form>
                                     </div>
                                 </div>
 
