@@ -11,8 +11,8 @@
 body {
     .body-font;
     padding-top: 50px;
-    background-color: #000;
-    color: #fff;
+    background-color: #F8F8F8;
+    //color: #fff;
 }
 //
 //a {
@@ -434,28 +434,30 @@ footer {
 //}
 
 // Button Styles
-.btn-outline {
-    color: #FFF;
-    border-color: #FFF;
-    border: 1px solid;
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
+.header-content {
+    .btn-outline {
         color: #FFF;
-        background-color: @theme-primary;
-        border-color: @theme-primary;
+        border-color: #FFF;
+        border: 1px solid;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: #FFF;
+            background-color: @theme-primary;
+            border-color: @theme-primary;
+        }
     }
-}
 
-.btn {
-    //.alt-font;
-    border-radius: 300px;
-}
+    .btn {
+        //.alt-font;
+        border-radius: 300px;
+    }
 
-.btn-xl {
-    padding: 10px 30px;
-    //font-size: 12px;
+    .btn-xl {
+        padding: 10px 30px;
+        //font-size: 12px;
+    }
 }
 
 //// Extras
@@ -575,4 +577,124 @@ footer {
 
 .modal {
     color: #000;
+}
+
+#cars-timeline {
+    margin-top: 230px;
+    .timeline ul li {
+        list-style-type: none;
+        position: relative;
+        width: 4px;
+        margin: -200px auto 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #E0E0E0;
+    }
+
+    .timeline ul li::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: inherit;
+    }
+
+    .timeline ul li div.timeline-element {
+        position: relative;
+        bottom: 0;
+        width: 400px;
+        padding: 8px;
+        background: #FFF;
+        border: solid 1px #E0E0E0;
+        border-radius: 4px;
+    }
+
+    .timeline ul li div.timeline-element::before, div.timeline-element::after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    .timeline ul li:nth-child(even) div.timeline-element {
+        left: 45px;
+    }
+
+    .timeline ul li:nth-child(even) div.timeline-element::before {
+        left: -17px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #E0E0E0 transparent transparent;
+    }
+
+    .timeline ul li:nth-child(even) div.timeline-element::after {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #FFF transparent transparent;
+    }
+
+    .timeline ul li:nth-child(odd) div.timeline-element {
+        left: -439px;
+    }
+
+    .timeline ul li:nth-child(odd) div.timeline-element::before {
+        right: -17px;
+        border-width: 8px 0 8px 16px;
+        border-color: transparent transparent transparent #E0E0E0;
+    }
+
+    .timeline ul li:nth-child(odd) div.timeline-element::after {
+        right: -15px;
+        border-width: 8px 0 8px 16px;
+        border-color: transparent transparent transparent #FFF;
+    }
+
+    .timeline ul li img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+        .timeline ul li div.timeline-element {
+            width: 250px;
+        }
+        .timeline ul li:nth-child(odd) div.timeline-element {
+            left: -289px; /*250+45-6*/
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #cars-timeline {
+        margin-top: 20px;
+        .timeline ul li {
+            //margin-left: 20px;
+            margin: 0 auto 0 0;
+        }
+
+        .timeline ul li div.timeline-element {
+            //width: calc(100vw - 91px);
+        }
+
+        .timeline ul li:nth-child(odd) div.timeline-element {
+            left: 45px;
+        }
+
+        .timeline ul li:nth-child(odd) div.timeline-element::before {
+            left: -17px;
+            border-width: 8px 16px 8px 0;
+            border-color: transparent #E0E0E0 transparent transparent;
+        }
+
+        .timeline ul li:nth-child(odd) div.timeline-element::after {
+            left: -15px;
+            border-width: 8px 16px 8px 0;
+            border-color: transparent #FFF transparent transparent;
+        }
+    }
 }

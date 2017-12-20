@@ -33,7 +33,8 @@ app.service('UI', ['$http', function($http) {
 
 app.service('whatCarService', ['API', function(API) {
     this.getQuestion = function(answers) {
-        return API.call('post', '/whatCar', answers);
+        var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
+        return API.call('post', '/whatCar', answers, headers);
     };
     this.sendIsHelpful = function(whatCarLogId, isHelpful) {
     	var jsonRequest = {"whatCarLogId": whatCarLogId, "isHelpful": isHelpful};

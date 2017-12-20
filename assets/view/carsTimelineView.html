@@ -1,0 +1,24 @@
+<div class="container" id="cars-timeline">
+    <section class="timeline">
+        <ul>
+            <li ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)">
+                <a name="{{car.code}}"></a>
+                <div class="timeline-element">
+                    <div class="img">
+                        <img ng-src="{{car.img}}" />
+                    </div>
+                    <div class="content">
+                        <h4><time>{{car.release_date}}</time></h4>
+                        <h3><a href="#{{car.code}}">{{car.title}}</a></h3>
+                        <h2>{{car.supTitle}}</h2>
+                        <p>{{car.description}}</p>
+                    </div>
+                    <div>
+                        <div class="fb-share-button" data-href="http://extrabhp.com/cars-timeline#Koenigsegg-One:1" data-layout="button" data-size="small"></div>
+                    </div>
+                </div>
+            </li>
+            <!-- more list items here -->
+        </ul>
+    </section>
+</div>

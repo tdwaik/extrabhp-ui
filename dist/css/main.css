@@ -19,8 +19,7 @@
 body {
   font-family: 'Open Sans', serif;
   padding-top: 50px;
-  background-color: #000;
-  color: #fff;
+  background-color: #F8F8F8;
 }
 .navbar-nav > li > a {
   padding-top: 11px !important;
@@ -48,12 +47,12 @@ body {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: #17b4c7;
+  color: #f44d3c;
   font-weight: 500;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #128b99;
+  color: #ef220e;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 20px;
@@ -78,11 +77,11 @@ body {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #17b4c7;
+  color: #f44d3c;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #17b4c7 !important;
+  color: #f44d3c !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -168,31 +167,31 @@ footer p {
   text-decoration: none;
 }
 .text-primary {
-  color: #17b4c7;
+  color: #f44d3c;
 }
-.btn-outline {
+.header-content .btn-outline {
   color: #FFF;
   border-color: #FFF;
   border: 1px solid;
 }
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
+.header-content .btn-outline:hover,
+.header-content .btn-outline:focus,
+.header-content .btn-outline:active,
+.header-content .btn-outline.active {
   color: #FFF;
-  background-color: #17b4c7;
-  border-color: #17b4c7;
+  background-color: #f44d3c;
+  border-color: #f44d3c;
 }
-.btn {
+.header-content .btn {
   border-radius: 300px;
 }
-.btn-xl {
+.header-content .btn-xl {
   padding: 10px 30px;
 }
 .loader {
   border: 7px solid #f3f3f3;
   /* Light grey */
-  border-top: 7px solid #17b4c7;
+  border-top: 7px solid #f44d3c;
   /* Blue */
   border-radius: 50%;
   width: 60px;
@@ -202,7 +201,7 @@ footer p {
 .loader-small {
   border: 3px solid #f3f3f3;
   /* Light grey */
-  border-top: 3px solid #17b4c7;
+  border-top: 3px solid #f44d3c;
   /* Blue */
   border-radius: 50%;
   width: 30px;
@@ -284,4 +283,104 @@ footer p {
 }
 .modal {
   color: #000;
+}
+#cars-timeline {
+  margin-top: 230px;
+}
+#cars-timeline .timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 4px;
+  margin: -200px auto 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #E0E0E0;
+}
+#cars-timeline .timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+#cars-timeline .timeline ul li div.timeline-element {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 8px;
+  background: #FFF;
+  border: solid 1px #E0E0E0;
+  border-radius: 4px;
+}
+#cars-timeline .timeline ul li div.timeline-element::before,
+#cars-timeline div.timeline-element::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+#cars-timeline .timeline ul li:nth-child(even) div.timeline-element {
+  left: 45px;
+}
+#cars-timeline .timeline ul li:nth-child(even) div.timeline-element::before {
+  left: -17px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #E0E0E0 transparent transparent;
+}
+#cars-timeline .timeline ul li:nth-child(even) div.timeline-element::after {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #FFF transparent transparent;
+}
+#cars-timeline .timeline ul li:nth-child(odd) div.timeline-element {
+  left: -439px;
+}
+#cars-timeline .timeline ul li:nth-child(odd) div.timeline-element::before {
+  right: -17px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #E0E0E0;
+}
+#cars-timeline .timeline ul li:nth-child(odd) div.timeline-element::after {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #FFF;
+}
+#cars-timeline .timeline ul li img {
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  #cars-timeline .timeline ul li div.timeline-element {
+    width: 250px;
+  }
+  #cars-timeline .timeline ul li:nth-child(odd) div.timeline-element {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+@media screen and (max-width: 600px) {
+  #cars-timeline {
+    margin-top: 20px;
+  }
+  #cars-timeline .timeline ul li {
+    margin: 0 auto 0 0;
+  }
+  #cars-timeline .timeline ul li:nth-child(odd) div.timeline-element {
+    left: 45px;
+  }
+  #cars-timeline .timeline ul li:nth-child(odd) div.timeline-element::before {
+    left: -17px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #E0E0E0 transparent transparent;
+  }
+  #cars-timeline .timeline ul li:nth-child(odd) div.timeline-element::after {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #FFF transparent transparent;
+  }
 }
