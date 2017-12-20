@@ -1,9 +1,9 @@
+Header set Cache-Control "max-age=0, no-cache"
+
 Options +FollowSymLinks
 Options -Indexes
 
 RewriteEngine on
-
-RewriteCond %{HTTP_HOST} ^dev\.extrabhp\.com [NC]
 
 RewriteCond %{HTTP_HOST} ^(?!dev).*\.extrabhp\.com [NC]
 RewriteRule ^(.*) http://extrabhp.com [R=301,L,QSA]
