@@ -104,10 +104,7 @@ h6 {
             }
         }
     }
-    sub {
-        font-size: 60%;
-    }
-
+    @media (min-width: 768px) {
         background-color: transparent;
         border-color: transparent;
         .navbar-header .navbar-brand {
@@ -125,7 +122,7 @@ h6 {
             }
         }
         &.affix {
-            background-color: #000;
+            background-color: @nav-black;
             border-color: fade(@gray-darker, 10%);
             .navbar-header .navbar-brand {
                 color: @theme-primary;
@@ -142,7 +139,7 @@ h6 {
                 }
             }
         }
-
+    }
 }
 
 // Homepage Header
@@ -166,7 +163,7 @@ header {
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
-        margin: -50px auto auto -70px;
+        //margin: -50px auto auto -70px;
     }
 
     //color: #FFF;
@@ -396,7 +393,7 @@ footer {
     //background-color: @gray-darker;
     padding: 10px 0;
     color: fade(#FFF, 30%);
-    background-color: #262f38;
+    background-color: @nav-black;
     //text-align: center;
     p {
         font-size: 12px;
