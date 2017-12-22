@@ -12,12 +12,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             templateUrl: '/assets/view/petrolhead101View.html',
             controller: 'petrolhead101Controller'
         })
-        .when('/404', {
-            templateUrl: '/assets/view/404.html'
-        })
         .when('/cars-timeline', {
             templateUrl: '/assets/view/carsTimelineView.html',
             controller: 'carsTimelineController'
+        })
+        .when('/404', {
+            templateUrl: '/assets/view/404.html'
         })
         .otherwise({
             templateUrl: '/assets/view/404.html'

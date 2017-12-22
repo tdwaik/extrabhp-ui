@@ -10,8 +10,8 @@
 
 body {
     .body-font;
-    padding-top: 50px;
-    background-color: #F8F8F8;
+    padding-top: 43px;
+    //background-color: #F8F8F8;
     //color: #fff;
 }
 //
@@ -56,7 +56,7 @@ h6 {
 .navbar-brand {height: auto; padding: 11px 15px;}
 
 .navbar-default {
-    background-color: #000;
+    background-color: #262f38;
     color: #FFF;
     border-color: fade(@gray-darker, 5%);
     .transition-all;
@@ -72,7 +72,6 @@ h6 {
     }
     .navbar-header .navbar-toggle {
         font-size: 20px;
-        color: #FFF !important;
         padding: 0;
         border: none;
     }
@@ -82,14 +81,13 @@ h6 {
     .nav {
         > li {
             > a {
-                .alt-font;
-                font-size: 11px;
-                font-weight: bold;
-                color: #FFF !important;
+                font-family: Lato,Helvetica,Arial,sans-serif;
+                //font-size: 11px;
+                //font-weight: bold;
             }
             > a,
             > a:focus {
-                color: @gray-darker;
+                color: #FFF;//@gray-darker;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -106,42 +104,45 @@ h6 {
             }
         }
     }
-    //@media (min-width: 768px) {
-    //    background-color: transparent;
-    //    border-color: transparent;
-    //    .navbar-header .navbar-brand {
-    //        color: fade(#FFF, 70%);
-    //        &:hover,
-    //        &:focus {
-    //            color: #FFF;
-    //        }
-    //    }
-    //    .nav > li > a,
-    //    .nav > li > a:focus {
-    //        color: fade(#FFF, 70%);
-    //        &:hover {
-    //            color: #FFF;
-    //        }
-    //    }
-    //    &.affix {
-    //        background-color: #FFF;
-    //        border-color: fade(@gray-darker, 10%);
-    //        .navbar-header .navbar-brand {
-    //            color: @gray-darker;
-    //            &:hover,
-    //            &:focus {
-    //                color: @theme-primary;
-    //            }
-    //        }
-    //        .nav > li > a,
-    //        .nav > li > a:focus {
-    //            color: @gray-darker;
-    //            &:hover {
-    //                color: @theme-primary;
-    //            }
-    //        }
-    //    }
-    //}
+    sub {
+        font-size: 60%;
+    }
+
+        background-color: transparent;
+        border-color: transparent;
+        .navbar-header .navbar-brand {
+            color: fade(#FFF, 70%);
+            &:hover,
+            &:focus {
+                color: #FFF;
+            }
+        }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: fade(#FFF, 70%);
+            &:hover {
+                color: #FFF;
+            }
+        }
+        &.affix {
+            background-color: #000;
+            border-color: fade(@gray-darker, 10%);
+            .navbar-header .navbar-brand {
+                color: @theme-primary;
+                &:hover,
+                &:focus {
+                    color: @theme-primary;
+                }
+            }
+            .nav > li > a,
+            .nav > li > a:focus {
+                color: #FFF;//@gray-darker;
+                &:hover {
+                    color: @theme-primary;
+                }
+            }
+        }
+
 }
 
 // Homepage Header
@@ -151,11 +152,22 @@ header {
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: -43px;
     //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), @theme-secondary; /* fallback for old browsers */
     //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
     //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     //background: url("/img/bg/5e487c8509d8586866427ea4d165e5f8.jpg") center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     //background: url("http://eskipaper.com/images/mclaren-4.jpg") center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    img {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        margin: -50px auto auto -70px;
+    }
 
     //color: #FFF;
     .header-content {
@@ -187,12 +199,12 @@ header {
             border-radius: 3px;
         }
     }
-    @media (min-width: 768px) {
+
         min-height: 95%;
         .header-content {
             //text-align: left;
             padding: 0;
-            height: 82vh;
+            height: 90vh;
             .header-content-inner {
                 max-width: none;
                 margin: 0;
@@ -209,7 +221,7 @@ header {
             max-height: calc(100vh - 100px);
             margin: 100px auto 0;
         }
-    }
+
     //@media (min-width: 992px) {
     //    .header-content .header-content-inner h1 {
     //        font-size: 50px;
@@ -384,6 +396,7 @@ footer {
     //background-color: @gray-darker;
     padding: 10px 0;
     color: fade(#FFF, 30%);
+    background-color: #262f38;
     //text-align: center;
     p {
         font-size: 12px;
@@ -495,6 +508,7 @@ footer {
     width: 60px;
     height: 60px;
     animation: spin 1s linear infinite;
+    margin: 0 auto;
 }
 
 .loader-small {

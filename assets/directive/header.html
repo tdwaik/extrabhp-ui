@@ -1,11 +1,11 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="/">Extra BHP</a><sub> Pre-alpha</sub>
+            <div><a class="navbar-brand page-scroll" href="/">Extra BHP</a><sub> Pre-alpha</sub></div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,14 +15,62 @@
                     <a class="page-scroll" href="/petrolhead-101">Petrolhead <span class="text-primary">101</span></a>
                 </li>
                 <li>
-                    <a class="page-scroll generalModal" href="/cars-timeline">Cars Timeline</a>
+                    <a class="page-scroll" href="/cars-timeline">Cars Timeline</a>
                 </li>
                 <li>
-                    <a class="page-scroll generalModal" href="#" data-modal="contactUs">Contact</a>
+                    <a class="page-scroll" href="" data-toggle="modal" data-target="#contact-us-modal">Contact</a>
                 </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
+
 </nav>
+
+<!-- Contact Modal -->
+<div id="contact-us-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Contact Us</h4>
+            </div>
+            <div class="modal-body">
+                <p>Sorry no contact form yet! but you're welcome to send me an email to <a href="mailto:thaer.dwaik@gmail.com">thaer.dwaik@gmail.com</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    (function($) {
+        "use strict";
+
+        // Highlight the top nav as scrolling occurs
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 100
+        });
+
+        // Closes the Responsive Menu on Menu Item Click
+        $('.navbar-collapse ul li a').click(function() {
+            $('.navbar-toggle:visible').click();
+        });
+
+        // Offset for Main Navigation
+        $('#mainNav').affix({
+            offset: {
+                top: (window.location.pathname === '/')? 50 : -1
+            }
+        });
+
+    })(jQuery);
+</script>
+

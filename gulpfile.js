@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
-//var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
@@ -43,6 +44,34 @@ gulp.task('minify-css', ['less'], function() {
         // .pipe(browserSync.reload({
         //     stream: true
         // }))
+});
+
+// Compiles SCSS files from /scss into /css
+gulp.task('scss', function() {
+    return gulp.src('scss/main.scss')
+        .pipe(sass())
+        .pipe(header(banner, {
+            pkg: pkg
+        }))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+// Minify compiled CSS
+gulp.task('minify-css', ['scss'], function() {
+    return gulp.src('dist/css/main.css')
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 // Minify JS

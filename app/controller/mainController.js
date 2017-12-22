@@ -2,7 +2,7 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-app.controller('mainController', ['$rootScope', function($rootScope) {
+app.controller('mainController', ['$rootScope', '$location', function($rootScope, $location) {
 
     $rootScope.alerts = [];
 
@@ -13,5 +13,16 @@ app.controller('mainController', ['$rootScope', function($rootScope) {
     $rootScope.closeAlert = function(index) {
         $rootScope.alerts.slice(1, index);
     };
+
+    $rootScope.$on("$locationChangeStart", function() {
+        $(window).off('.affix');
+        $('#mainNav').removeData('bs.affix').removeClass('affix affix-top affix-bottom');
+
+        $('#mainNav').affix({
+            offset: {
+                top: ($location.path() === '/')? 50 : -1
+            }
+        });
+    });
 
 }]);

@@ -1,8 +1,10 @@
-<header>
-    <div class="container">
-        <div class="row" ng-init="init()">
-            <div class="col-sm-12">
-                <div class="header-content">
+<header class="masthead">
+    <!--<img ng-src="http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/engine-wallpaper-5.jpg" />-->
+    <img ng-src="/img/bg/engine-wallpaper-5.jpg" />
+    <div class="container h-100">
+        <div class="row h-100" ng-init="init()">
+            <div class="col-sm-12 my-auto">
+                <div class="header-content mx-auto">
                     <div class="header-content-inner">
                         <!--<h1>The Best Car for you from a Petrolhead view:</h1>-->
                         <h1>Let me help you choose your car:</h1>
@@ -11,47 +13,39 @@
                         <div ng-if="result == null">
                             <h3>{{question.question}}</h3>
 
-                            <div ng-if="loading == true">
-                                <ul class="list-inline intro-social-buttons">
-                                    <li><div class="loader"></div></li>
-                                </ul>
-                            </div>
+                            <div ng-if="loading == true" class="loader"></div>
                             <div ng-if="loading == false">
                                 <span ng-if="question.type != 'multiple_choice'">
-                                    <ul class="list-inline intro-social-buttons">
-                                        <li ng-repeat="answer in question.answers">
-                                            <a class="btn btn-default btn-xl" ng-click="submitAnswer(question.name, answer.value)">{{answer.answer}}</a>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item" ng-repeat="answer in question.answers">
+                                            <a class="btn btn-outline btn-xl js-scroll-trigger" ng-click="submitAnswer(question.name, answer.value)">{{answer.answer}}</a>
                                         </li>
                                     </ul>
                                 </span>
 
                                 <span ng-if="question.type == 'multiple_choice'">
                                     <span ng-repeat="answer in question.answers">
-                                        <input type="checkbox" id="{{answer.value}}" ng-model="checkboxModel[answer.value]" class="btn btn-default btn-xl" /><label for="{{answer.value}}">{{answer.answer}}</label>
+                                        <input type="checkbox" id="{{answer.value}}" ng-model="checkboxModel[answer.value]" class="btn btn-outline btn-xl js-scroll-trigger" /><label for="{{answer.value}}">{{answer.answer}}</label>
                                     </span>
-                                    <a class="btn btn-default btn-xl" ng-if="getCheckedBoxesValue() != ''" ng-click="submitCheckboxModel(question.name)">Next</a>
+                                    <a class="btn btn-outline btn-xl js-scroll-trigger" ng-if="getCheckedBoxesValue() != ''" ng-click="submitCheckboxModel(question.name)">Next</a>
                                 </span>
 
                                 <span ng-if="showBack()">
-                                    <a class="btn btn-default btn-xl" ng-click="back()">Back</a>
+                                    <a class="btn btn-outline btn-xl js-scroll-trigger" ng-click="back()">Back</a>
                                 </span>
                             </div>
 
                         </div>
                         <div ng-if="result != null">
-                            <div ng-if="loading == true">
-                                <ul class="list-inline intro-social-buttons">
-                                    <li><div class="loader"></div></li>
-                                </ul>
-                            </div>
+                            <div ng-if="loading == true" class="loader"></div>
                             <div ng-if="loading == false">
                                 <h3>{{result}}</h3>
 
                                 <div ng-if="isHelpful.show" class="is-helpfull">
                                     <h3>Does this answer helpful ?</h3>
                                     <div ng-if="isHelpful.loading">
-                                        <ul class="list-inline intro-social-buttons">
-                                            <li><div class="loader-small"></div></li>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item"><div class="loader-small"></div></li>
                                         </ul>
                                     </div>
                                     <div ng-if="!isHelpful.loading">
@@ -63,8 +57,8 @@
                                 <div ng-if="feedback.show">
                                     <p>Any feedback is appreciated?</p>
                                     <div ng-if="feedback.loading">
-                                        <ul class="list-inline intro-social-buttons">
-                                            <li><div class="loader-small"></div></li>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item"><div class="loader-small"></div></li>
                                         </ul>
                                     </div>
                                     <div class="row">
@@ -78,27 +72,12 @@
                                 <div ng-if="showThanks"><p>Thanks!</p></div>
 
                                 <br />
-                                <a class="btn btn-default btn-xl" ng-click="tryAgain()">Start Again</a>
+                                <a class="btn btn-outline btn-xl js-scroll-trigger" ng-click="tryAgain()">Start Again</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--<div class="col-sm-5">-->
-                <!--<div class="device-container">-->
-                    <!--<div class="device-mockup iphone6_plus portrait white">-->
-                        <!--<div class="device">-->
-                            <!--<div class="screen">-->
-                                 <!--&lt;!&ndash;Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else!&ndash;&gt;-->
-                                <!--<img app="img/demo-screen-1.jpg" class="img-responsive" alt="">-->
-                            <!--</div>-->
-                            <!--<div class="button">-->
-                                <!--&lt;!&ndash; You can hook the "home button" to some JavaScript events or just remove it &ndash;&gt;-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
         </div>
     </div>
 </header>
