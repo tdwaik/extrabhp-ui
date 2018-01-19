@@ -25,4 +25,10 @@ app.controller('mainController', ['$rootScope', '$location', function($rootScope
         });
     });
 
+    $scope.contactUs = {
+        submit: function() {
+            grecaptcha.execute();
+        }
+    }
+
 }]);

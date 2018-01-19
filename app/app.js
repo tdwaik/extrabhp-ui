@@ -67,7 +67,7 @@ app.config(['$httpProvider', function($httpProvider) {
         return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
     }];
 }]).run(['$http', '$cookies', function($http, $cookies) {
-    $http.defaults.headers.common['Authorization'] = $cookies.get('aj');
+    // $http.defaults.headers.common['Authorization'] = $cookies.get('aj');
 
 }]);
 

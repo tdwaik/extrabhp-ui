@@ -1,5 +1,6 @@
 <div class="container" id="cars-timeline">
-    <section class="timeline">
+    <div ng-if="loading == true" class="loader"></div>
+    <section ng-if="loading == false" class="timeline">
         <ul>
             <li ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)">
                 <a name="{{car.code}}"></a>
@@ -8,7 +9,7 @@
                         <img ng-src="{{car.img}}" />
                     </div>
                     <div class="content">
-                        <h4><time>{{car.release_date}}</time></h4>
+                        <h4><time>{{car.productionDate}}</time></h4>
                         <h3><a href="#{{car.code}}">{{car.title}}</a></h3>
                         <h2>{{car.supTitle}}</h2>
                         <p>{{car.description}}</p>

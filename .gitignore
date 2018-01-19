@@ -1,4 +1,7 @@
 node_modules
 bower_components
-.idea/
 package-lock.json
+
+# Editors files
+.idea/
+.vscode/

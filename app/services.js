@@ -48,6 +48,13 @@ app.service('whatCarService', ['API', function(API) {
     };
 }]);
 
+app.service('carsTimelineService', ['API', function(API) {
+    this.getTimeline = function() {
+        var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
+        return API.call('get', '/carsTimeline', null, headers);
+    };
+}]);
+
 app.service('UIService', ['UI', function(UI) {
     this.getModal = function(modalFileName) {
         return UI.call('get', '/assets/modal/' + modalFileName + '.html');

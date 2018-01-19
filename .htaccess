@@ -5,8 +5,10 @@ Options -Indexes
 
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^(?!dev).*\.extrabhp\.com [NC]
-RewriteRule ^(.*) http://extrabhp.com [R=301,L,QSA]
+RewriteCond %{SERVER_PORT} !443
+RewriteCond %{HTTP_HOST} !^extrabhp\.com [NC]
+RewriteCond %{HTTP_HOST} !^dev\.extrabhp\.com [NC]
+RewriteRule ^(.*) https://extrabhp.com [R=301,L,QSA]
 
 RewriteCond %{REQUEST_URI} ^\/less\/.*|^\/app\/.*|^\/\..*|^\/gulpfile.js|^\/package.json|^\/package-lock.json
 RewriteRule ^(.+) / [R=404,L]
