@@ -2,7 +2,7 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-app.controller('mainController', ['$rootScope', '$location', function($rootScope, $location) {
+app.controller('mainController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
 
     $rootScope.alerts = [];
 

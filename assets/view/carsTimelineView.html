@@ -9,8 +9,8 @@
                         <img ng-src="{{car.img}}" />
                     </div>
                     <div class="content">
-                        <h4><time>{{car.productionDate}}</time></h4>
-                        <h3><a href="#{{car.code}}">{{car.title}}</a></h3>
+                        <h5><time>{{car.productionDate.substr(id.length - 4)}}</time></h5>
+                        <h3>{{car.title}}</h3>
                         <h2>{{car.supTitle}}</h2>
                         <p>{{car.description}}</p>
                     </div>

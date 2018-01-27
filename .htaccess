@@ -5,12 +5,19 @@ Options -Indexes
 
 RewriteEngine on
 
-RewriteCond %{SERVER_PORT} !443
-RewriteCond %{HTTP_HOST} !^extrabhp\.com [NC]
-RewriteCond %{HTTP_HOST} !^dev\.extrabhp\.com [NC]
+#RewriteCond %{SERVER_PORT} !443
+#RewriteCond %{HTTP_HOST} !^dev\.extrabhp\.com [NC]
+#RewriteRule ^(.*) https://extrabhp.com [R=301,L,QSA]
+
+RewriteCond %{HTTP_HOST} !^extrabhp\.com
+RewriteCond %{HTTP_HOST} !^dev\.extrabhp\.com
 RewriteRule ^(.*) https://extrabhp.com [R=301,L,QSA]
 
 RewriteCond %{REQUEST_URI} ^\/less\/.*|^\/app\/.*|^\/\..*|^\/gulpfile.js|^\/package.json|^\/package-lock.json
 RewriteRule ^(.+) / [R=404,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ / [L,QSA]
 
 ErrorDocument 404 /
