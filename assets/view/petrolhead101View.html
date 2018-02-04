@@ -1,62 +1,72 @@
 <div class="container petrolhead-101">
+    <div class="row">
 
-    <div class="row col-xs-12">
-        <div class="my-auto">
-            <h2 class="mb-0">Petrolhea <span class="text-primary">101</span></h2>
-            <h4 class="mb-5">The first step to stop being Human and become a Petrolhead!</h4>
-            <h6><sup>*</sup> This page will have updates frequently</h6>
-        </div>
-    </div>
+        <div class="col-sm-3">
+            <div class="nav-side-menu">
+                <div class="brand"><i class="fas fa-angle-down toggle-btn" data-toggle="collapse" data-target="#menu-content"></i> Topics</div>
 
-    <!--<div class="row col-xs-12">-->
-        <!--<h3 class="mb-5">Cars you must know about</h3>-->
 
-        <!--<div class="col-lg-4 col-sm-6 portfolio" ng-repeat="info in mustKnow">-->
-            <!--<a class="portfolio-box">-->
-                <!--<img class="img-fluid" ng-src="{{info.img}}" alt="" />-->
-                <!--<div class="portfolio-box-caption">-->
-                    <!--<div class="portfolio-box-caption-content">-->
-                        <!--<div class="project-category text-faded">{{info.subTitle}}</div>-->
-                        <!--<div class="project-name">{{info.title}}</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</a>-->
-        <!--</div>-->
+                <div class="menu-list">
 
-    <!--</div>-->
+                    <ul id="menu-content" class="menu-content list-group collapse out">
 
-    <div class="row col-xs-12">
-        <div class="my-auto">
-            <h1 class="mb-5">Internal Combustion Engine</h1>
+                        <!--<li  data-toggle="collapse" data-target="#dictionary" class="collapsed list-group-item">-->
+                            <!--<span>Dictionary<span class="arrow"></span></span>-->
+                        <!--</li>-->
+                        <!--<ul class="sub-menu collapse" id="dictionary">-->
+                            <!--<a href="#" class="sub-item list-group-item">Petrolhead</a>-->
+                            <!--<a href="#" class="sub-item list-group-item">JDM</a></li>-->
+                            <!--<a href="#" class="sub-item list-group-item">Muscle Car</a></li>-->
+                        <!--</ul>-->
 
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <div class="subheading mb-3">From Wikipedia</div>
-                    <p>An internal combustion engine (ICE) is a heat engine where the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit. In an internal combustion engine, the expansion of the high-temperature and high-pressure gases produced by combustion applies direct force to some component of the engine. The force is applied typically to pistons, turbine blades, rotor or a nozzle. This force moves the component over a distance, transforming chemical energy into useful mechanical energy.</p>
-                </div>
-                <div class="resume-date text-md-right">
-                    More: <span class="text-primary"><a target="_blank" href="https://en.wikipedia.org/wiki/Internal_combustion_engine">https://en.wikipedia.org/wiki/Internal_combustion_engine</a></span>
+
+                        <li data-toggle="collapse" data-target="#service" class="collapsed list-group-item">
+                            <span>Engine <span class="arrow"></span></span>
+                        </li>
+                        <ul class="sub-menu" id="service">
+                            <a href="" class="sub-item list-group-item" ng-click="scrollTo('Internal_Combustion_Engine', this)">Internal Combustion Engine</a>
+                            <a href="" class="sub-item list-group-item" ng-click="scrollTo('Mazda_Wankel_engine', this)">Mazda Wankel engine</a>
+                        </ul>
+
+                        <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Differential', this)">Differential</a>
+                        <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Limited-slip_differential', this)">Limited-slip differential</a>
+                        <!--<a href="" class="list-group-item" ng-repeat="topic in topics" ng-click="scrollTo(topic.code, this)">{{topic.title}}</a>-->
+
+                    </ul>
                 </div>
             </div>
 
         </div>
-    </div>
 
-    <div class="row col-xs-12">
-        <div class="my-auto">
-            <h1 class="mb-5">Limited-slip differential</h1>
 
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <div class="subheading mb-3">From Wikipedia</div>
-                    <p>A limited-slip differential is a type of differential that allows its two output shafts to rotate at different speeds but limits the maximum difference between the two shafts.</p>
-                </div>
-                <div class="resume-date text-md-right">
-                    More: <span class="text-primary"><a target="_blank" href="https://en.wikipedia.org/wiki/Limited-slip_differential">https://en.wikipedia.org/wiki/Limited-slip_differential</a></span>
+        <div class="col-sm-9">
+            <!--<nav class="col-sm-3">-->
+                <!--<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">-->
+                    <!--<li><a href="" ng-repeat="topic in topics" ng-click="scrollTo(topic.code, this)">{{topic.title}}</a></li>-->
+                <!--</ul>-->
+            <!--</nav>-->
+            <div class="row my-auto">
+                <h2 class="mb-0">Petrolhead <span class="text-primary">101</span></h2>
+                <h4 class="mb-5">The first step to stop being Human and become a Petrolhead!</h4>
+            </div>
+            <div class="row topic" ng-repeat="topic in topics">
+                <a id="{{topic.code}}"></a>
+                <div class="topic-content">
+                    <div class="col-md-3">
+                        <img class="rounded mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 300px; max-width: 100%;" />
+                    </div>
+                    <div class="col-md-9">
+                        <h3>{{topic.title}}</h3>
+                        <p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>
+                        <p>{{topic.content}}</p>
+                        <span ng-if="topic.ref_link.length > 0">More: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">{{topic.ref_link}}</a></span></span>
+                    </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+
+    <div style="clear: both"></div>
 
 </div>

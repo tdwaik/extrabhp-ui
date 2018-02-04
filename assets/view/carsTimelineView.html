@@ -1,16 +1,17 @@
-<div class="container" id="cars-timeline">
+<div class="container" id="cars-timeline" ng-init="init()">
     <div ng-if="loading == true" class="loader"></div>
     <section ng-if="loading == false" class="timeline">
         <ul>
-            <li ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)">
-                <a name="{{car.code}}"></a>
+            <li ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)" id="e-{{$index}}">
+                <style>#e-{{$index}}::after { content: "{{car.productionDate.substr(id.length - 4)}}" }</style>
+                <a id="{{car.code}}"></a>
                 <div class="timeline-element">
                     <div class="img">
                         <img ng-src="{{car.img}}" />
                     </div>
                     <div class="content">
                         <h5><time>{{car.productionDate.substr(id.length - 4)}}</time></h5>
-                        <h3>{{car.title}}</h3>
+                        <h3><a href="" ng-click="scrollTo(car.code, this)">{{car.title}}</a></h3>
                         <h2>{{car.supTitle}}</h2>
                         <p>{{car.description}}</p>
                     </div>

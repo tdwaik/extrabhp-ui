@@ -1,17 +1,18 @@
 /**
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
-
 app.controller('carsTimelineController', ['$scope', 'carsTimelineService', function($scope, carsTimelineService) {
 
     $scope.loading = true;
 
-    carsTimelineService.getTimeline().then(function(response) {
-        $scope.timeline = response.data;
-        $scope.loading = false;
-    }, function (response) {
-        alerts.oops();
-    });
+    $scope.init = function() {
+        carsTimelineService.getTimeline().then(function(response) {
+            $scope.timeline = response.data;
+            $scope.loading = false;
+        }, function (response) {
+            //alerts.oops();
+        });
+    };
 
     $scope.shareFB = function (car) {
 

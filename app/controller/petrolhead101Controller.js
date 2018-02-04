@@ -2,17 +2,13 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-app.controller('petrolhead101Controller', ['$scope', function($scope) {
+app.controller('petrolhead101Controller', ['$scope', '$anchorScroll', function($scope, $anchorScroll) {
 
-    $scope.mustKnow = [
-        {"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Lamborghini_Miura_Sinsheim.jpg/1200px-Lamborghini_Miura_Sinsheim.jpg", "subTitle": "First Mid-Engine", "title": "Lamborghini Miura", "description": ""},
-        {"img": "http://orig10.deviantart.net/7f27/f/2009/281/0/9/m_power_by_evertech11.jpg", "subTitle": "BMW M Power", "title": "BMW M3 Series", "description": ""},
-        {"img": "https://www.mercedes-benz.com/wp-content/uploads/sites/3/2017/07/07-mercedes-benz-vehicles-mercedes-amg-gt-4-c-190-2560x1919-1280x960.jpg", "subTitle": "Mercedes-AMG", "title": "Mercedes-AMG", "description": ""},
-        {"img": "http://dealeraccelerate-all.s3.amazonaws.com/lusso/images/3/9/39/4432_232d0d9c4dcb_low_res.JPG", "subTitle": "Toyota Supra", "title": "Toyota Supra", "description": ""},
-        {"img": "https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/_dl22628.jpg?itok=dN83bQe2", "subTitle": "Nissan GTR", "title": "Nissan GTR", "description": ""},
-        {"img": "http://st.automobilemag.com/uploads/sites/11/2013/06/Mercedes-Benz-SLS-AMG-Electric-Drive-on-Ring-5.jpg", "subTitle": "Mercedes-AMG SLS Electric", "title": "Mercedes-AMG SLS Electric", "description": ""},
-        {"img": "https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/916x515/quality/95/http://www.blogcdn.com/www.autoblog.com/media/2009/10/lexuslfafd_07.jpg", "subTitle": "Lexus LFA", "title": "Lexus LFA", "description": ""},
-        {"img": "https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/koenigsegg-one-1-014.jpg?itok=m4qCuo7D", "subTitle": "koenigsegg One:1", "title": "koenigsegg One:1", "description": ""},
-    ];
+    $scope.topics = [
+        {code: 'Internal_Combustion_Engine', img: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif', title: 'Internal Combustion Engine', content: 'An internal combustion engine (ICE) is a heat engine where the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit. In an internal combustion engine, the expansion of the high-temperature and high-pressure gases produced by combustion applies direct force to some component of the engine. The force is applied typically to pistons, turbine blades, rotor or a nozzle. This force moves the component over a distance, transforming chemical energy into useful mechanical energy.', ref: 'Wikipedia', ref_link: 'https://en.wikipedia.org/wiki/Internal_combustion_engine'},
+        {code: 'Differential', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/BAUMA_2004_ZF_Differentialgetriebe.jpg/1920px-BAUMA_2004_ZF_Differentialgetriebe.jpg', title: 'Differential', content: 'Differential used to control the take-up reel of a paper tape reader made by Tally circa 1962. The bevel gears spin freely on their shafts, unless a brake shoe stops the left gear. This causes the planet gear to drive the output shaft at half the speed of the driven gear on the right.', ref: 'Wikipedia', ref_link: 'https://en.wikipedia.org/wiki/Differential_(mechanical_device)'},
+        {code: 'Limited-slip_differential', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Limited_slip_diff_cone.jpg/1280px-Limited_slip_diff_cone.jpg', title: 'Limited-slip differential', content: 'A limited-slip differential is a type of differential that allows its two output shafts to rotate at different speeds but limits the maximum difference between the two shafts.', ref: 'Wikipedia', ref_link: 'https://en.wikipedia.org/wiki/Limited-slip_differential'},
+        {code: 'Mazda_Wankel_engine', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wankel-1.jpg/560px-Wankel-1.jpg', title: 'Mazda Wankel engine', content: 'The Mazda Wankel engines comprise a family of car engines produced by Mazda, derived from experiments in the early 1960s by Felix Wankel, a German engineer. Over the years, displacement has been increased and turbocharging has been added.', ref: 'Wikipedia', ref_link: 'https://en.wikipedia.org/wiki/Mazda_Wankel_engine'}
+    ]
 
 }]);

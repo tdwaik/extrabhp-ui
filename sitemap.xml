@@ -12,4 +12,8 @@
         <loc>https://extrabhp.com/petrolhead-101</loc>
         <changefreq>daily</changefreq>
     </url>
+    <url>
+        <loc>https://extrabhp.com/about</loc>
+        <changefreq>daily</changefreq>
+    </url>
 </urlset>

@@ -16,6 +16,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             templateUrl: '/assets/view/carsTimelineView.html',
             controller: 'carsTimelineController'
         })
+        .when('/about', {
+            templateUrl: '/assets/view/aboutView.html',
+            controller: 'aboutController'
+        })
         .when('/404', {
             templateUrl: '/assets/view/404.html'
         })

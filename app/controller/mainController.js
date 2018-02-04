@@ -2,7 +2,7 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-app.controller('mainController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
+app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorScroll', function($rootScope, $scope, $location, $anchorScroll) {
 
     $rootScope.alerts = [];
 
@@ -24,6 +24,11 @@ app.controller('mainController', ['$rootScope', '$scope', '$location', function(
             }
         });
     });
+
+    $rootScope.scrollTo = function (to) {
+        $location.hash(to);
+        $anchorScroll();
+    };
 
     $scope.contactUs = {
         submit: function() {
