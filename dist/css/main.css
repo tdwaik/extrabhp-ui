@@ -16,6 +16,10 @@
 body {
   padding-top: 43px;
 }
+a:hover,
+a:focus {
+  text-decoration: none;
+}
 #mainNav .navbar-nav > li > a {
   padding-top: 11px !important;
   padding-bottom: 11px !important;
