@@ -172,8 +172,8 @@ header .device-container {
   margin: 100px auto 0;
 }
 footer {
-  padding: 10px 0;
-  background-color: #111;
+  background-color: #f2f2f2;
+  padding: 20px 0;
 }
 footer p {
   font-size: 12px;
@@ -181,11 +181,12 @@ footer p {
   color: rgba(255, 255, 255, 0.7);
 }
 .quote-banner {
-  background-color: #FFF;
+  background-color: #2F2F2F;
   padding: 20px 0 15px 0;
+  color: #FFF;
 }
 .quote-banner .quote {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
@@ -201,6 +202,13 @@ footer p {
 .quote-banner ul li a:active,
 .quote-banner ul li a.active {
   text-decoration: none;
+}
+.follow-banner {
+  padding: 10px 0;
+}
+.follow-banner i {
+  padding: 10px;
+  font-size: 20px;
 }
 .text-primary {
   color: #f44d3c;

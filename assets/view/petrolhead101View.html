@@ -10,22 +10,19 @@
 
                     <ul id="menu-content" class="menu-content list-group collapse out">
 
-                        <!--<li  data-toggle="collapse" data-target="#dictionary" class="collapsed list-group-item">-->
-                            <!--<span>Dictionary<span class="arrow"></span></span>-->
-                        <!--</li>-->
-                        <!--<ul class="sub-menu collapse" id="dictionary">-->
-                            <!--<a href="#" class="sub-item list-group-item">Petrolhead</a>-->
-                            <!--<a href="#" class="sub-item list-group-item">JDM</a></li>-->
-                            <!--<a href="#" class="sub-item list-group-item">Muscle Car</a></li>-->
-                        <!--</ul>-->
-
-
-                        <li data-toggle="collapse" data-target="#service" class="collapsed list-group-item">
-                            <span>Engine <span class="arrow"></span></span>
+                        <li data-toggle="collapse" data-target="#Engine" class="collapsed list-group-item">
+                            <span>Engine <i class="fas fa-angle-down"></i></span>
                         </li>
-                        <ul class="sub-menu" id="service">
+                        <ul class="sub-menu" id="Engine">
                             <a href="" class="sub-item list-group-item" ng-click="scrollTo('Internal_Combustion_Engine', this)">Internal Combustion Engine</a>
                             <a href="" class="sub-item list-group-item" ng-click="scrollTo('Mazda_Wankel_engine', this)">Mazda Wankel engine</a>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#Dictionary" class="collapsed list-group-item">
+                            <span>Dictionary <i class="fas fa-angle-down"></i></span>
+                        </li>
+                        <ul class="sub-menu" id="Dictionary">
+                            <a href="" class="sub-item list-group-item" ng-repeat="item in dictionary" ng-click="scrollTo(item.code, this)">{{item.name}}</a>
                         </ul>
 
                         <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Differential', this)">Differential</a>
@@ -45,10 +42,11 @@
                     <!--<li><a href="" ng-repeat="topic in topics" ng-click="scrollTo(topic.code, this)">{{topic.title}}</a></li>-->
                 <!--</ul>-->
             <!--</nav>-->
-            <div class="row my-auto">
+            <div class="my-auto">
                 <h2 class="mb-0">Petrolhead <span class="text-primary">101</span></h2>
                 <h4 class="mb-5">The first step to stop being Human and become a Petrolhead!</h4>
             </div>
+
             <div class="row topic" ng-repeat="topic in topics">
                 <a id="{{topic.code}}"></a>
                 <div class="topic-content">
@@ -63,10 +61,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row topic" ng-repeat="dictionaryItem in dictionary">
+                <a id="{{dictionaryItem.code}}"></a>
+                <div class="topic-content">
+                    <div class="col-md-9">
+                        <h3>{{dictionaryItem.name}}</h3>
+                        <p>{{dictionaryItem.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
         </div>
 
     </div>
-
-    <div style="clear: both"></div>
 
 </div>
