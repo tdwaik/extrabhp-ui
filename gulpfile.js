@@ -95,7 +95,7 @@ gulp.task('minify-js', function() {
 
 // Copy lib libraries from /node_modules into /lib
 gulp.task('copy', function() {
-    gulp.src(['node_modules/underscore/underscore-min.js'])
+    gulp.src(['node_modules/underscore/underscore-min.js', 'node_modules/underscore/underscore-min.map'])
         .pipe(gulp.dest('dist/js/lib/underscore'));
     // gulp.app(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
     //     .pipe(gulp.dest('lib/bootstrap'));

@@ -6,11 +6,12 @@ app.controller('carsTimelineController', ['$scope', 'carsTimelineService', funct
     $scope.loading = true;
     $scope.timelineDate = null;
 
-    $scope.isTimelineDate = function(date) {
+    $scope.isTimelineDate = function(date, updateTimelineDate) {
         if($scope.timelineDate === null) {
-            $scope.timelineDate = date;
+            if(updateTimelineDate) $scope.timelineDate = date;
+            return true;
         }else if($scope.timelineDate !== date) {
-            $scope.timelineDate = date;
+            if(updateTimelineDate) $scope.timelineDate = date;
             return true;
         }else return false;
     };

@@ -45,26 +45,30 @@
             <div class="row topic" ng-repeat="topic in topics">
                 <a id="{{topic.code}}"></a>
                 <div class="topic-content">
+                    <h3 class="visible-xs col-xs-12" style="margin: -10px auto 20px auto; ">{{topic.title}}</h3>
                     <div class="col-lg-2 col-sm-2">
                         <img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 300px; max-width: 100%;" />
                     </div>
                     <div class="col-lg-10 col-sm-10">
-                        <h3 class="p-0 m-0">{{topic.title}}</h3>
+                        <h3 class="p-0 m-0 hidden-xs" style="margin-top: 0px">{{topic.title}}</h3>
+                        <h3 class="p-0 m-0 visible-xs"> </h3>
                         <p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>
                         <p>{{topic.content}}</p>
                         <span ng-if="topic.ref_link.length > 0">More: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">{{topic.ref_link}}</a></span></span>
                     </div>
                 </div>
+                <hr style="margin-bottom:0" />
             </div>
 
             <div class="row topic" ng-repeat="dictionaryItem in dictionary">
                 <a id="{{dictionaryItem.code}}"></a>
                 <div class="topic-content">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <h3>{{dictionaryItem.name}}</h3>
                         <p>{{dictionaryItem.content}}</p>
                     </div>
                 </div>
+                <hr />
             </div>
         </div>
 

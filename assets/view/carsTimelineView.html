@@ -3,8 +3,9 @@
     <div ng-if="loading == true" class="loader"></div>
     <section ng-if="loading == false" class="timeline" style="text-align: center">
             <div ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)" id="e-{{$index}}">
+                <hr class="visible-sm visible-xs" ng-if="::!isTimelineDate(car.productionDate.substr(- 4), false)" />
                 <div class="followMeBar col-lg-12 col-xs-12"
-                     ng-if="::isTimelineDate(car.productionDate.substr(- 4))">
+                     ng-if="::isTimelineDate(car.productionDate.substr(- 4), true)">
                     <a name="{{car.productionDate.substr(- 4)}}"></a>
                     <hr><h4>{{car.productionDate.substr(- 4)}}</h4><hr>
                 </div>
@@ -21,7 +22,6 @@
                             <p>{{car.description}}</p>
                         </div>
                     </div>
-                    <!--<hr class="visible-sm visible-xs" />-->
                 </div>
             </div>
     </section>
