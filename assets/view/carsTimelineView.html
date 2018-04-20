@@ -1,26 +1,54 @@
-<div class="container" id="cars-timeline" ng-init="init()">
+<div class="container" id="cars-timeline-v2" ng-init="init()">
+<div class="container" ng-init="init()">
     <div ng-if="loading == true" class="loader"></div>
-    <section ng-if="loading == false" class="timeline">
-        <ul>
-            <li ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)" id="e-{{$index}}">
-                <style>#e-{{$index}}::after { content: "{{car.productionDate.substr(id.length - 4)}}" }</style>
-                <a id="{{car.code}}"></a>
-                <div class="timeline-element">
-                    <div class="img">
-                        <img ng-src="{{car.img}}" />
-                    </div>
-                    <div class="content">
-                        <h5><time>{{car.productionDate.substr(id.length - 4)}}</time></h5>
-                        <h3><a href="" ng-click="scrollTo(car.code, this)">{{car.title}}</a></h3>
-                        <h2>{{car.supTitle}}</h2>
-                        <p>{{car.description}}</p>
-                    </div>
-                    <!--<div>-->
-                        <!--<div class="fb-share-button" data-href="http://extrabhp.com/cars-timeline#{{car.code}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fextrabhp.com%2Fcars-timeline&amp;src=sdkpreparse"></a></div>-->
-                    <!--</div>-->
+    <section ng-if="loading == false" class="timeline" style="text-align: center">
+            <div ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)" id="e-{{$index}}">
+                <div class="followMeBar col-lg-12 col-xs-12"
+                     ng-if="::isTimelineDate(car.productionDate.substr(- 4))">
+                    <a name="{{car.productionDate.substr(- 4)}}"></a>
+                    <hr><h4>{{car.productionDate.substr(- 4)}}</h4><hr>
                 </div>
-            </li>
-            <!-- more list items here -->
-        </ul>
+                <div class="col-lg-3 text-center mb-4">
+                    <a name="{{car.code}}"></a>
+                    <div class="timeline-element">
+                        <div class="img">
+                            <img ng-src="{{car.img}}" style="max-width: 100%;" />
+                        </div>
+                        <div class="content">
+                            <h4 class="visible-sm visible-xs"><time>{{car.productionDate.substr(- 4)}}</time></h4>
+                            <h4><a href="#" ng-click="scrollTo(car.code, this)">{{car.title}}</a></h4>
+                            <h2>{{car.supTitle}}</h2>
+                            <p>{{car.description}}</p>
+                        </div>
+                    </div>
+                    <!--<hr class="visible-sm visible-xs" />-->
+                </div>
+            </div>
     </section>
+
+<!--<div class="container" id="cars-timeline" ng-init="init()">-->
+    <!--<div ng-if="loading == true" class="loader"></div>-->
+    <!--<section ng-if="loading == false" class="timeline">-->
+        <!--<ul>-->
+            <!--<li ng-repeat="car in timeline track by $index" ng-mouseover="shareFB(car)" id="e-{{$index}}">-->
+                <!--<style>#e-{{$index}}::after { content: "{{car.productionDate.substr(- 4)}}" }</style>-->
+                <!--<a id="{{car.code}}"></a>-->
+                <!--<div class="timeline-element">-->
+                    <!--<div class="img">-->
+                        <!--<img ng-src="{{car.img}}" />-->
+                    <!--</div>-->
+                    <!--<div class="content">-->
+                        <!--<h5><time>{{car.productionDate.substr(- 4)}}</time></h5>-->
+                        <!--<h3><a href="" ng-click="scrollTo(car.code, this)">{{car.title}}</a></h3>-->
+                        <!--<h2>{{car.supTitle}}</h2>-->
+                        <!--<p>{{car.description}}</p>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="fb-share-button" data-href="http://extrabhp.com/cars-timeline#{{car.code}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fextrabhp.com%2Fcars-timeline&amp;src=sdkpreparse"></a></div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--&lt;!&ndash; more list items here &ndash;&gt;-->
+        <!--</ul>-->
+    <!--</section>-->
 </div>

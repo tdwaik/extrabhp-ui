@@ -26,8 +26,10 @@ app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorS
     });
 
     $rootScope.scrollTo = function (to) {
+        var id = $location.hash();
         $location.hash(to);
         $anchorScroll();
+        $location.hash(id);
     };
 
     $scope.contactUs = {

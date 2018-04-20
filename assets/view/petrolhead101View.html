@@ -15,7 +15,7 @@
                         </li>
                         <ul class="sub-menu" id="Engine">
                             <a href="" class="sub-item list-group-item" ng-click="scrollTo('Internal_Combustion_Engine', this)">Internal Combustion Engine</a>
-                            <a href="" class="sub-item list-group-item" ng-click="scrollTo('Mazda_Wankel_engine', this)">Mazda Wankel engine</a>
+                            <a href="" class="sub-item list-group-item" ng-click="scrollTo('Wankel_Engine', this)">Wankel engine</a>
                         </ul>
 
                         <li data-toggle="collapse" data-target="#Dictionary" class="collapsed list-group-item">
@@ -45,11 +45,11 @@
             <div class="row topic" ng-repeat="topic in topics">
                 <a id="{{topic.code}}"></a>
                 <div class="topic-content">
-                    <div class="col-md-3">
-                        <img class="rounded mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 300px; max-width: 100%;" />
+                    <div class="col-lg-2 col-sm-2">
+                        <img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 300px; max-width: 100%;" />
                     </div>
-                    <div class="col-md-9">
-                        <h3>{{topic.title}}</h3>
+                    <div class="col-lg-10 col-sm-10">
+                        <h3 class="p-0 m-0">{{topic.title}}</h3>
                         <p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>
                         <p>{{topic.content}}</p>
                         <span ng-if="topic.ref_link.length > 0">More: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">{{topic.ref_link}}</a></span></span>

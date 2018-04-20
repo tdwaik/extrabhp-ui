@@ -62,11 +62,11 @@ h6 {
     .heading-font;
     .navbar-header .navbar-brand {
         .heading-font;
-        color: @theme-primary;
+        color: #FFF;//@theme-primary;
         font-weight: 500;
         &:hover,
         &:focus {
-            color: darken(@theme-primary, 10%);
+            color: darken(#FFF, 10%);
         }
     }
     .navbar-header .navbar-toggle {
@@ -124,10 +124,10 @@ h6 {
             background-color: @nav-black;
             border-color: fade(@gray-darker, 10%);
             .navbar-header .navbar-brand {
-                color: @theme-primary;
+                color: #FFF;//@theme-primary;
                 &:hover,
                 &:focus {
-                    color: @theme-primary;
+                    color: #FFF;//@theme-primary;
                 }
             }
             .nav > li > a,
@@ -595,6 +595,10 @@ footer {
     color: #000;
 }
 
+#cars-timeline-v2 {
+    margin-top: 20px;
+}
+
 #cars-timeline {
     margin-top: 230px;
     .timeline ul li {
@@ -782,7 +786,7 @@ footer {
 
 .nav-side-menu {
     overflow: auto;
-    font-family: verdana;
+    //font-family: verdana;
     font-size: 12px;
     font-weight: 200;
     //background-color: #2e353d;

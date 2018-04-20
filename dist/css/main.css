@@ -6,7 +6,9 @@
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
-  letter-spacing: 1px;
+}
+.body-font {
+  font-family: 'Lato', sans-serif;
 }
 .alt-font {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -14,6 +16,7 @@
   letter-spacing: 2px;
 }
 body {
+  font-family: 'Lato', sans-serif;
   padding-top: 43px;
 }
 a:hover,
@@ -40,18 +43,16 @@ a:focus {
   transition: all 0.35s;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
-  letter-spacing: 1px;
 }
 #mainNav .navbar-header .navbar-brand {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
-  letter-spacing: 1px;
-  color: #f44d3c;
+  color: #FFF;
   font-weight: 500;
 }
 #mainNav .navbar-header .navbar-brand:hover,
 #mainNav .navbar-header .navbar-brand:focus {
-  color: #ef220e;
+  color: #e6e6e6;
 }
 #mainNav .navbar-header .navbar-toggle {
   font-size: 20px;
@@ -106,11 +107,11 @@ a:focus {
     border-color: rgba(34, 34, 34, 0.1);
   }
   #mainNav.affix .navbar-header .navbar-brand {
-    color: #f44d3c;
+    color: #FFF;
   }
   #mainNav.affix .navbar-header .navbar-brand:hover,
   #mainNav.affix .navbar-header .navbar-brand:focus {
-    color: #f44d3c;
+    color: #FFF;
   }
   #mainNav.affix .nav > li > a,
   #mainNav.affix .nav > li > a:focus {
@@ -275,6 +276,9 @@ footer p {
 .modal {
   color: #000;
 }
+#cars-timeline-v2 {
+  margin-top: 20px;
+}
 #cars-timeline {
   margin-top: 230px;
 }
@@ -426,7 +430,6 @@ footer p {
 }
 .nav-side-menu {
   overflow: auto;
-  font-family: verdana;
   font-size: 12px;
   font-weight: 200;
   z-index: 1;
