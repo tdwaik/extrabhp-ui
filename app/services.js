@@ -2,7 +2,8 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-var APIEndPoint = 'https://extrabhp.com:8443';
+var APIEndPoint = 'https://extrabhp.com/s';
+//var APIEndPoint = 'http://dev.extrabhp.com/s';
 var UIEndPoint = 'https://extrabhp.com';
 
 app.service('API', ['$http', function($http) {
