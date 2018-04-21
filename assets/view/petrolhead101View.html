@@ -44,14 +44,14 @@
             <div class="row topic" ng-repeat="topic in topics">
                 <a id="{{topic.code}}"></a>
                 <div class="topic-content">
-                    <div class="col-lg-2 col-sm-2 text-center">
+                    <div class="col-lg-2 col-sm-2 text-center" style="margin-bottom: 10px">
                         <img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 220px; max-width: 100%;" />
                     </div>
                     <div class="col-lg-10 col-sm-10">
-                        <h3 class="p-0 m-0">{{topic.title}}</h3>
+                        <h3 class="p-0 m-0" style="margin-top: 0;">{{topic.title}}</h3>
                         <p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>
                         <p>{{topic.content}}</p>
-                        <span ng-if="topic.ref_link.length > 0">Read More from <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">Wikipedia</a></span></span>
+                        <span ng-if="topic.ref_link.length > 0">More on: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">Wikipedia</a></span></span>
                     </div>
                 </div>
                 <hr style="margin-bottom:0" />
