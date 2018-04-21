@@ -5,7 +5,6 @@
             <div class="nav-side-menu">
                 <div class="brand"><i class="fas fa-angle-down toggle-btn" data-toggle="collapse" data-target="#menu-content"></i> Topics</div>
 
-
                 <div class="menu-list">
 
                     <ul id="menu-content" class="menu-content list-group collapse out">
@@ -45,16 +44,14 @@
             <div class="row topic" ng-repeat="topic in topics">
                 <a id="{{topic.code}}"></a>
                 <div class="topic-content">
-                    <h3 class="visible-xs col-xs-12" style="margin: -10px auto 20px auto; ">{{topic.title}}</h3>
-                    <div class="col-lg-2 col-sm-2">
-                        <img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 300px; max-width: 100%;" />
+                    <div class="col-lg-2 col-sm-2 text-center">
+                        <img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 220px; max-width: 100%;" />
                     </div>
                     <div class="col-lg-10 col-sm-10">
-                        <h3 class="p-0 m-0 hidden-xs" style="margin-top: 0px">{{topic.title}}</h3>
-                        <h3 class="p-0 m-0 visible-xs"> </h3>
+                        <h3 class="p-0 m-0">{{topic.title}}</h3>
                         <p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>
                         <p>{{topic.content}}</p>
-                        <span ng-if="topic.ref_link.length > 0">More: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">{{topic.ref_link}}</a></span></span>
+                        <span ng-if="topic.ref_link.length > 0">Read More from <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">Wikipedia</a></span></span>
                     </div>
                 </div>
                 <hr style="margin-bottom:0" />
@@ -75,3 +72,28 @@
     </div>
 
 </div>
+
+<!-- <script>
+    (function($) {
+        "use strict";
+
+        function checkOffset() {
+            if($('#social-float').offset().top + $('#social-float').height() 
+                                             >= $('#quote-banner').offset().top) {
+                $('#social-float').css('position', 'absolute');
+                $('#social-float').css('bottom', '-' + $('#quote-banner').offset().top + 20  + 'px');
+                // $('#social-float').css('top', $(document).scrollTop() - $('#social-float').offset().top  + 'px');
+            }
+
+            if($(document).scrollTop() + window.innerHeight < $('#quote-banner').offset().top) {
+                $('#social-float').css('position', 'fixed'); // restore when you scroll up
+                $('#social-float').css('bottom', 'inherit');
+            }
+            // $('#social-float').text($(document).scrollTop() + window.innerHeight);
+        }
+        $(document).scroll(function() {
+            checkOffset();
+        });
+
+    })(jQuery);
+</script> -->
