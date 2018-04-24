@@ -2,7 +2,7 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorScroll', function($rootScope, $scope, $location, $anchorScroll) {
+app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorScroll', 'feedbackService', function($rootScope, $scope, $location, $anchorScroll, feedbackService) {
 
     $rootScope.alerts = [];
 
@@ -35,6 +35,25 @@ app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorS
     $scope.contactUs = {
         submit: function() {
             grecaptcha.execute();
+        }
+    };
+
+    $scope.feedback = {
+        email: null,
+        content: null,
+        loading: false,
+        submit: function () {
+            $scope.feedback.loading = true;
+            feedbackService.submitFeedback($scope.feedback.email, $scope.feedback.content).then(
+                function (response) {
+                    if(response.code === 201) {
+                        $scope.feedback.loading = false;
+                    }
+                },
+                function () {
+
+                }
+            );
         }
     }
 

@@ -61,3 +61,11 @@ app.service('UIService', ['UI', function(UI) {
         return UI.call('get', '/assets/modal/' + modalFileName + '.html');
     };
 }]);
+
+app.service('feedbackService', ['API', function(API) {
+    this.submitFeedback = function(email, feedbackContent) {
+        var jsonRequest = {"email": email, "feedbackContent": feedbackContent};
+        var headers = {"Content-Type": "application/json"};
+        return API.call('put', '/feedback', JSON.stringify(jsonRequest), headers);
+    };
+}]);

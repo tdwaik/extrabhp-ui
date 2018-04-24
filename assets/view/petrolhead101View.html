@@ -34,28 +34,139 @@
 
         </div>
 
-
         <div class="col-sm-9">
             <div class="my-auto">
                 <h3 class="mb-0">Petrolhead <span class="text-primary">101</span></h3>
                 <h5 class="mb-5">The first step to stop being Human and become a <a href="" ng-click="scrollTo('Petrolhead', this)">Petrolhead!</a></h5>
             </div>
 
-            <div class="row topic" ng-repeat="topic in topics">
-                <a id="{{topic.code}}"></a>
-                <div class="topic-content">
-                    <div class="col-lg-2 col-sm-2 text-center" style="margin-bottom: 10px">
-                        <img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 220px; max-width: 100%;" />
+            <hr />
+
+            <!-- 1. Engine -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="bb">1. Engine</h3>
+
+                    <!-- 1.1. Internal Combustion Engine -->
+                    <div class="col-lg-12">
+                        <h4 class="bb">1.1. Internal Combustion Engine</h4>
+                        <div class="col-lg-12">
+                            <p>An engine which generates motive power by the burning of petrol, oil, or other fuel with air inside the engine, the hot gases produced being used to drive a piston or do other work as they expand.</p>
+                        </div>
+
+                        <!-- 1.1.1. Piston Engine -->
+                        <div class="col-lg-12">
+                            <h5 class="bb">1.1.1. Piston Engine</h5>
+                            <img class="col-lg-2" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif" alt="Piston Engine" />
+                            <div class="col-lg-10">
+                                <h5>popular shapes:</h5>
+                                <div class="col-lg-2"><h6>Inline (I) Shape</h6></div>
+                                <div class="col-lg-2"><h6>V Shape</h6></div>
+                                <div class="col-lg-2"><h6>W Shape</h6></div>
+                                <div class="col-lg-2"><h6>Boxer Shape</h6></div>
+                                <div class="col-lg-2"><h6>Flat Shape</h6></div>
+                                <div class="col-lg-2"><h6>VR Shape</h6></div>
+                            </div>
+                            <div class="col-lg-10">
+                                <h5>main components:</h5>
+                                <div class="col-lg-2"><h6>piston</h6></div>
+                                <div class="col-lg-2"><h6>cylinder</h6></div>
+                                <div class="col-lg-2"><h6>camshaft</h6></div>
+                                <div class="col-lg-2"><h6>valve</h6></div>
+                                <div class="col-lg-2"><h6>crankshaft</h6></div>
+                            </div>
+                        </div>
+
+                        <!-- 1.1.2. Wankel Engine (Rotary) -->
+                        <div class="col-lg-12">
+                            <h5 class="bb">1.1.2. Wankel Engine (Rotary)</h5>
+                            <img class="col-lg-2" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Wankel_Cycle_anim_en.gif" alt="Wankel Engine" />
+                            <p class="col-lg-10">The Wankel engine is a type of internal combustion engine using an eccentric rotary design to convert pressure into rotating motion.</p>
+                        </div>
                     </div>
-                    <div class="col-lg-10 col-sm-10">
-                        <h3 class="p-0 m-0" style="margin-top: 0;">{{topic.title}}</h3>
-                        <p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>
-                        <p>{{topic.content}}</p>
-                        <span ng-if="topic.ref_link.length > 0">More on: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">Wikipedia</a></span></span>
+
+                    <!-- 1.2. Electric Engine -->
+                    <div class="col-lg-12">
+                        <h4 class="bb">1.2. Electric Engine</h4>
+                        <div class="col-lg-12">
+                            <p>Used in Electric & Hybrid cars</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- 2. Transmission and Gearbox -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="bb">2. Transmission and Gearbox</h3>
+
+                    <!-- 2.1. Manual Gearbox -->
+                    <div class="col-lg-12">
+                        <h4 class="bb">2.1. Manual Gearbox</h4>
+                        <div class="col-lg-12"><p>It's a driver-operated Gearbox (clutch & gear selector)</p></div>
+                    </div>
+
+                    <!-- 2.2. Automatic Transmissions -->
+                    <div class="col-lg-12">
+                        <h4 class="bb">2.2. Automatic Transmissions</h4>
+                        <div class="col-lg-12">
+                            <p>Typically this is a transmission that uses a torque converter</p>
+                            <h5 class="bb">2.2.1. Torque Converter</h5>
+                            <p class="col-lg-12">A torque converter is a type of fluid coupling which transfers rotating power from a prime mover, like an internal combustion engine, to a rotating driven load.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2.3. Continuously Variable Transmission (CVT) -->
+                    <div class="col-lg-12"><h4 class="bb">2.3. Continuously Variable Transmission (CVT)</h4></div>
+
+                    <!-- 2.4. Semi-Automatic Transmission -->
+                    <div class="col-lg-12">
+                        <h4 class="bb">2.4. Semi-Automatic Transmission</h4>
+                        <div class="col-lg-12"><h5 class="bb">2.4.1. Sequential Manual Gearbox (SMG)</h5></div>
+                        <div class="col-lg-12"><h5 class="bb">2.4.2. Direct Shift Gearbox (DSG)</h5></div>
                     </div>
                 </div>
-                <hr style="margin-bottom:0" />
             </div>
+
+            <hr />
+
+            <!-- 3. Differential -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="bb">3. Differential</h3>
+                    <img class="col-lg-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/BAUMA_2004_ZF_Differentialgetriebe.jpg/640px-BAUMA_2004_ZF_Differentialgetriebe.jpg" alt="Differential" />
+                    <p class="col-lg-10">A differential, is a device that allows one input to drive two outputs at differing speeds.</p>
+
+                    <div class="col-lg-12">
+                        <h4 class="bb">3.1. open differential</h4>
+                        <p class="col-lg-12">When the differential is unlocked (open differential), it allows each wheel to rotate at different speeds (such as when negotiating a turn), thus avoiding tire scuffing. An open (or unlocked) differential always provides the same torque (rotational force) to each of the two wheels, on that axle.</p>
+
+                        <h4 class="bb">3.2. Limited-slip differential</h4>
+                        <p class="col-lg-12">A limited-slip differential is a type of differential that allows its two output shafts to rotate at different speeds but limits the maximum difference between the two shafts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <!--<div class="col-lg-12 topic" ng-repeat="topic in topics">-->
+                <!--<a id="{{topic.code}}"></a>-->
+                <!--<div class="topic-content">-->
+                    <!--<div class="col-lg-2 col-sm-2 text-center" style="margin-bottom: 10px">-->
+                        <!--<img class="mb-3 mb-md-0" ng-src="{{topic.img}}" alt="{{topic.code}}" style="max-height: 220px; max-width: 100%;" />-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-10 col-sm-10">-->
+                        <!--<h3 class="p-0 m-0" style="margin-top: 0;">{{topic.title}}</h3>-->
+                        <!--<p ng-if="topic.ref.length > 0">From {{topic.ref}}</p>-->
+                        <!--<p>{{topic.content}}</p>-->
+                        <!--<span ng-if="topic.ref_link.length > 0">More on: <span class="text-primary"><a target="_blank" href="{{topic.ref_link}}">Wikipedia</a></span></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<hr style="margin-bottom:0" />-->
+            <!--</div>-->
 
             <div class="row topic" ng-repeat="dictionaryItem in dictionary">
                 <a id="{{dictionaryItem.code}}"></a>
@@ -72,28 +183,3 @@
     </div>
 
 </div>
-
-<!-- <script>
-    (function($) {
-        "use strict";
-
-        function checkOffset() {
-            if($('#social-float').offset().top + $('#social-float').height() 
-                                             >= $('#quote-banner').offset().top) {
-                $('#social-float').css('position', 'absolute');
-                $('#social-float').css('bottom', '-' + $('#quote-banner').offset().top + 20  + 'px');
-                // $('#social-float').css('top', $(document).scrollTop() - $('#social-float').offset().top  + 'px');
-            }
-
-            if($(document).scrollTop() + window.innerHeight < $('#quote-banner').offset().top) {
-                $('#social-float').css('position', 'fixed'); // restore when you scroll up
-                $('#social-float').css('bottom', 'inherit');
-            }
-            // $('#social-float').text($(document).scrollTop() + window.innerHeight);
-        }
-        $(document).scroll(function() {
-            checkOffset();
-        });
-
-    })(jQuery);
-</script> -->

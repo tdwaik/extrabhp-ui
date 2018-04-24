@@ -57,6 +57,47 @@
 	</div>
 </footer>
 
+<!-- Feedback Modal -->
+<a href="#feedback" role="button" class="btn btn-info" data-toggle="modal" style="position: fixed; right: 0; bottom: 0;">Feedback?</a>
+<div id="feedback" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Send Feedback</h4>
+			</div>
+			<div class="modal-body">
+				<form ng-submit="feedback.submit()">
+					<div class="form-group">
+						<div class="form-group">
+							<label for="feedback-email">Email:</label>
+							<input type="email" id="feedback-email" class="form-control" placeholder="(Optional)" ng-model="feedback.email" maxlength="100" />
+						</div>
+						<div class="form-group">
+							<label for="feedback-content">Feedback:</label>
+							<textarea id="feedback-content" class="form-control" ng-model="feedback.content" minlength="3" required selected></textarea>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="submit" class="btn btn-info" Value="Send" ng-disabled="feedback.loading" />
+							</div>
+							<div class="col-xs-10">
+								<div class="loader-small" ng-if="feedback.loading"></div>
+							</div>
+						</div>
+						<div><sub>* I'll read every single feedback</sub></div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
 <script>
     "use strict";
 
