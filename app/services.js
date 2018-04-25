@@ -3,7 +3,7 @@
  */
 
 var APIEndPoint = 'https://extrabhp.com/s';
-if(window.location.hostname === 'dev.extrabhp.com') {
+if(false && window.location.hostname === 'dev.extrabhp.com') {
     var APIEndPoint = 'http://dev.extrabhp.com/s';
 }
 var UIEndPoint = 'https://extrabhp.com';
