@@ -182,6 +182,7 @@
                 <div class="col-xs-12">
                     <h3 class="bb">5. Dictionary</h3>
                     <div class="col-xs-12" ng-repeat="dictionaryItem in dictionary track by $index">
+                        <a id="{{dictionaryItem.code}}"></a>
                         <h5>{{dictionaryItem.name}}</h5>
                         <p class="col-xs-12">{{dictionaryItem.content}}</p>
                     </div>
