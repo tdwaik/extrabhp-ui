@@ -73,8 +73,8 @@ app.controller('mainController', [
             // hide modal after 1 sec
             $timeout(function() { $('#feedback').modal('hide'); }, 1000);
 
-            // reset form after 5 sec
-            $timeout(function() { $scope.feedback.resetForm(); }, 5000);
+            // reset form after 4 sec
+            $timeout(function() { $scope.feedback.resetForm(); }, 4000);
         },
         submitFaild: function() {
             $scope.feedback.loading = false;
