@@ -70,6 +70,9 @@ app.controller('mainController', [
             $scope.feedback.showThankYou = true;
             $scope.feedback.submitFailure = false;
 
+            // hide modal after 1 sec
+            $timeout(function() { $('#feedback').modal('hide'); }, 1000);
+
             // reset form after 5 sec
             $timeout(function() { $scope.feedback.resetForm(); }, 5000);
         },
