@@ -3,6 +3,9 @@
  */
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+    $locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(true);
+    
     $routeProvider
         .when('/', {
             templateUrl: '/assets/view/homeView.html',
@@ -26,11 +29,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         .otherwise({
             templateUrl: '/assets/view/404.html'
         });
-
-    // configure html5 to get links working on jsfiddle
-    $locationProvider.html5Mode({
-        enabled: true
-    });
 
 }]);
 

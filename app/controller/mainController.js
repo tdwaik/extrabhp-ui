@@ -2,7 +2,14 @@
  * @author Thaer Aldwaik <t_dwaik@hotmail.com>
  */
 
-app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorScroll', 'feedbackService', function($rootScope, $scope, $location, $anchorScroll, feedbackService) {
+app.controller('mainController', [
+    '$rootScope',
+    '$scope',
+    '$location',
+    '$anchorScroll',
+    'feedbackService',
+    '$timeout',
+    function($rootScope, $scope, $location, $anchorScroll, feedbackService, $timeout) {
 
     $rootScope.alerts = [];
 
@@ -42,18 +49,40 @@ app.controller('mainController', ['$rootScope', '$scope', '$location', '$anchorS
         email: null,
         content: null,
         loading: false,
+        showThankYou: false,
+        submitFailure: false, 
         submit: function () {
             $scope.feedback.loading = true;
             feedbackService.submitFeedback($scope.feedback.email, $scope.feedback.content).then(
                 function (response) {
-                    if(response.code === 201) {
-                        $scope.feedback.loading = false;
+                    if(response.status === 201) {
+                        $scope.feedback.submitSuccess();
+                    }else {
+                        $scope.feedback.submitFaild();
                     }
-                },
-                function () {
-
+                },function() {
+                    $scope.feedback.submitFaild();
                 }
             );
+        },
+        submitSuccess: function() {
+            $scope.feedback.loading = false;
+            $scope.feedback.showThankYou = true;
+            $scope.feedback.submitFailure = false;
+
+            // reset form after 5 sec
+            $timeout(function() { $scope.feedback.resetForm(); }, 5000);
+        },
+        submitFaild: function() {
+            $scope.feedback.loading = false;
+            $scope.feedback.submitFailure = true;
+        },
+        resetForm: function() {
+            $scope.feedback.email = null;
+            $scope.feedback.content = null;
+            $scope.feedback.loading = false;
+            $scope.feedback.showThankYou = false;
+            $scope.feedback.submitFailure = false;
         }
     }
 

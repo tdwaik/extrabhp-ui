@@ -3,7 +3,9 @@
  */
 
 var APIEndPoint = 'https://extrabhp.com/s';
-//var APIEndPoint = 'http://dev.extrabhp.com/s';
+if(window.location.hostname === 'dev.extrabhp.com') {
+    var APIEndPoint = 'http://dev.extrabhp.com/s';
+}
 var UIEndPoint = 'https://extrabhp.com';
 
 app.service('API', ['$http', function($http) {
@@ -64,7 +66,7 @@ app.service('UIService', ['UI', function(UI) {
 
 app.service('feedbackService', ['API', function(API) {
     this.submitFeedback = function(email, feedbackContent) {
-        var jsonRequest = {"email": email, "feedbackContent": feedbackContent};
+        var jsonRequest = {"email": email, "content": feedbackContent};
         var headers = {"Content-Type": "application/json"};
         return API.call('put', '/feedback', JSON.stringify(jsonRequest), headers);
     };
