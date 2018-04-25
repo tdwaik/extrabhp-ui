@@ -4,12 +4,12 @@
 
 app.controller('petrolhead101Controller', ['$scope', '$anchorScroll', function($scope, $anchorScroll) {
 
-    $scope.topics = [
-        {code: 'Internal_Combustion_Engine', img: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif', title: 'Internal Combustion Engine', content: 'An engine which generates motive power by the burning of petrol, oil, or other fuel with air inside the engine, the hot gases produced being used to drive a piston or do other work as they expand.', ref_link: 'https://en.wikipedia.org/wiki/Internal_combustion_engine'},
-        {code: 'Wankel_Engine', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wankel-1.jpg/469px-Wankel-1.jpg', title: 'Wankel Engine', content: 'The Wankel engine is a type of internal combustion engine using an eccentric rotary design to convert pressure into rotating motion.', ref_link: 'https://en.wikipedia.org/wiki/Wankel_engine'},
-        {code: 'Differential', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/BAUMA_2004_ZF_Differentialgetriebe.jpg/640px-BAUMA_2004_ZF_Differentialgetriebe.jpg', title: 'Differential', content: 'A differential, is a device that allows one input to drive two outputs at differing speeds.', ref_link: 'https://en.wikipedia.org/wiki/Differential_(mechanical_device)'},
-        {code: 'Limited-slip_differential', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Limited_slip_diff_cone.jpg/743px-Limited_slip_diff_cone.jpg', title: 'Limited-slip differential', content: 'A limited-slip differential is a type of differential that allows its two output shafts to rotate at different speeds but limits the maximum difference between the two shafts.', ref_link: 'https://en.wikipedia.org/wiki/Limited-slip_differential'}
-    ];
+    // $scope.topics = [
+    //     {code: 'Internal_Combustion_Engine', img: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif', title: 'Internal Combustion Engine', content: 'An engine which generates motive power by the burning of petrol, oil, or other fuel with air inside the engine, the hot gases produced being used to drive a piston or do other work as they expand.', ref_link: 'https://en.wikipedia.org/wiki/Internal_combustion_engine'},
+    //     {code: 'Wankel_Engine', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wankel-1.jpg/469px-Wankel-1.jpg', title: 'Wankel Engine', content: 'The Wankel engine is a type of internal combustion engine using an eccentric rotary design to convert pressure into rotating motion.', ref_link: 'https://en.wikipedia.org/wiki/Wankel_engine'},
+    //     {code: 'Differential', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/BAUMA_2004_ZF_Differentialgetriebe.jpg/640px-BAUMA_2004_ZF_Differentialgetriebe.jpg', title: 'Differential', content: 'A differential, is a device that allows one input to drive two outputs at differing speeds.', ref_link: 'https://en.wikipedia.org/wiki/Differential_(mechanical_device)'},
+    //     {code: 'Limited-slip_differential', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Limited_slip_diff_cone.jpg/743px-Limited_slip_diff_cone.jpg', title: 'Limited-slip differential', content: 'A limited-slip differential is a type of differential that allows its two output shafts to rotate at different speeds but limits the maximum difference between the two shafts.', ref_link: 'https://en.wikipedia.org/wiki/Limited-slip_differential'}
+    // ];
 
     $scope.dictionary = [
         {code: "Petrolhead", name: "Petrolhead", content: "Car Enthusiast"},
