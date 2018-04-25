@@ -8,6 +8,7 @@ app.controller('aboutController', [ '$scope', '$timeout', 'feedbackService', fun
         submitFailure: false,
         submit: function () {
             $scope.contact.loading = true;
+            $scope.contact.showThankYou = false;
             feedbackService.submitFeedback($scope.contact.email, $scope.contact.content).then(
                 function (response) {
                     if(response.status === 201) {
@@ -38,7 +39,6 @@ app.controller('aboutController', [ '$scope', '$timeout', 'feedbackService', fun
             $scope.contact.email = null;
             $scope.contact.content = null;
             $scope.contact.loading = false;
-            $scope.contact.showThankYou = false;
             $scope.contact.submitFailure = false;
         }
     }
