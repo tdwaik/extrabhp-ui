@@ -10,12 +10,15 @@
                     <ul id="menu-content" class="menu-content list-group collapse out">
 
                         <li data-toggle="collapse" data-target="#Engine" class="collapsed list-group-item">
-                            <span>Engine <i class="fas fa-angle-down"></i></span>
+                            <!-- <span>Engine <i class="fas fa-angle-down"></i></span> -->
+                            <a href="#Engine" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Engine', this)">Engine</a>
+                            <a href="#Transmission_and_Gearbox" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Transmission_and_Gearbox', this)">Transmission & Gearbox</a>
+                            <a href="#Differential" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Differential', this)">Differential</a>
                         </li>
-                        <ul class="sub-menu" id="Engine">
+                        <!-- <ul class="sub-menu" id="Engine">
                             <a href="" class="sub-item list-group-item" ng-click="scrollTo('Internal_Combustion_Engine', this)">Internal Combustion Engine</a>
                             <a href="" class="sub-item list-group-item" ng-click="scrollTo('Wankel_Engine', this)">Wankel engine</a>
-                        </ul>
+                        </ul> -->
 
                         <li data-toggle="collapse" data-target="#Dictionary" class="collapsed list-group-item">
                             <span>Dictionary <i class="fas fa-angle-down"></i></span>
@@ -24,8 +27,8 @@
                             <a href="" class="sub-item list-group-item" ng-repeat="item in dictionary" ng-click="scrollTo(item.code, this)">{{item.name}}</a>
                         </ul>
 
-                        <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Differential', this)">Differential</a>
-                        <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Limited-slip_differential', this)">Limited-slip differential</a>
+                        <!-- <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Differential', this)">Differential</a> -->
+                        <!-- <a href="" class="list-group-item ng-binding ng-scope" ng-click="scrollTo('Limited-slip_differential', this)">Limited-slip differential</a> -->
                         <!--<a href="" class="list-group-item" ng-repeat="topic in topics" ng-click="scrollTo(topic.code, this)">{{topic.title}}</a>-->
 
                     </ul>
@@ -43,6 +46,7 @@
             <hr />
 
             <!-- 1. Engine -->
+            <a class="anchor" id="Engine"></a>
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="bb">1. Engine</h3>
@@ -98,10 +102,11 @@
 
             <hr />
 
-            <!-- 2. Transmission and Gearbox -->
+            <!-- 2. Transmission & Gearbox -->
+            <a class="anchor" id="Transmission_and_Gearbox"></a>
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="bb">2. Transmission and Gearbox</h3>
+                    <h3 class="bb">2. Transmission & Gearbox</h3>
 
                     <!-- 2.1. Manual Gearbox -->
                     <div class="col-lg-12">
@@ -134,6 +139,7 @@
             <hr />
 
             <!-- 3. Differential -->
+            <a class="anchor" id="Differential"></a>
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="bb">3. Differential</h3>
@@ -169,7 +175,7 @@
             <!--</div>-->
 
             <div class="row topic" ng-repeat="dictionaryItem in dictionary">
-                <a id="{{dictionaryItem.code}}"></a>
+                <a class="anchor" id="{{dictionaryItem.code}}"></a>
                 <div class="topic-content">
                     <div class="col-md-12">
                         <h3>{{dictionaryItem.name}}</h3>
