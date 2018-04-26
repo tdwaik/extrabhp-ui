@@ -1,25 +1,26 @@
-<div class="container text-center">
-    <div class="row">
-        <div class="col-lg-12 mx-auto">
-            <h3>Extra BHP is a website for Car Enthusiasts</h3>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid" id="contact-faqs">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-12 mx-auto">
-                <h2>FAQ's</h2>
-                <p class="lead mb-5">Is buying an electric cars a good idea? Yes, especially if you have another car, it's the future, no fuel cost, low maintenance cost</p>
-                <p class="lead mb-5">Is it a good idea to buying an Expensive car with a cheep price when it's get old? No, it'll kill you with maintenance costs</p>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container">
     <div class="row">
-        <h2 class="text-center">Contact Me</h2>
+        <div class="col-lg-12 mx-auto">
+            <h3 class="text-center">About Extra BHP</h3>
+            <p class="col-md-6 col-md-offset-3 text-center">Extra BHP is a website for Car Enthusiasts, totally free to use and enjoy.</p>
+        </div>
+    </div>
+</div>
+<hr />
+<!--<div class="container-fluid" id="contact-faqs">-->
+    <!--<div class="container text-center">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-8 col-md-offset-2">-->
+                <!--<h3>FAQ's</h3>-->
+                <!--<p>Is buying an electric cars a good idea? Yes, especially if you have another car, it's the future, no fuel cost, low maintenance cost</p>-->
+                <!--<p>Is it a good idea to buying an Expensive car with a cheep price when it's get old? No, it'll kill you with maintenance costs</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="container">
+    <div class="row">
+        <h3 class="text-center">Contact Me</h3>
 
         <form class="col-md-6 col-md-offset-3" ng-submit="contact.submit()">
             <div class="form-group">
@@ -28,8 +29,8 @@
                     <input type="email" id="contact-email" class="form-control" ng-model="contact.email" maxlength="100" required />
                 </div>
                 <div class="form-group">
-                    <label for="contact-content">Your Message:</label>
-                    <textarea id="contact-content" class="form-control" rows="5" ng-model="contact.content" minlength="3" required></textarea>
+                    <label for="contact-content">Message:</label>
+                    <textarea id="contact-content" class="form-control" rows="5" placeholder="I'll read every message :)" ng-model="contact.content" minlength="3" required></textarea>
                 </div>
                 <div class="row">
                     <div class="col-xs-2" ng-if="!contact.submitFailure">
