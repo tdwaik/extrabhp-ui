@@ -1,22 +1,52 @@
+<?php $config = parse_ini_file('config.ini'); ?>
+<!-----------------------------------------------------------------------------------------------
+<?php /*       _______ ___  ___   __________ ______    ____           _____     ___    ___ _____        *
+      /  ____/ \  \/  /  /___   ___//  ___ \  /    \         /  __  \  /  /   /  //  __  \      *
+     /  /___    \    /      /  /   /  /__/ / /  /\  \       /  /_/  / /  /___/  //  /_/  /      *
+    /  ____/    /    \     /  /   /  /  __/ /  /__\  \     /  __  /  /  /___/  //  __  /        *
+   /  /___     /  /\  \   /  /   /  /  \   /  ______  \   /  /_/  \ /  /   /  //  /_/  \        *
+  /______/    /__/  \__\ /__/   /__/ \__\ /__/      \__\ /________//__/   /__//________/        *
+
+
+   ______ ___  ___ __________ ______       ____           _____     ___    ___ _____            *
+  |  ___| \  \/  /|___   ___||   __  \    /    \         /  __  \  /  /   /  //  __  \          *
+  |  |__   \    /    |  |    |  |__| |   /  /\  \       /  /_/  / /  /___/  //  /_/  /          *
+  |  ___|  /    \    |  |    |  |   /   /  /__\  \     /  __  /  /  /___/  //  __  /            *
+  |  |__  /  /\  \   |  |    |  |\  \  /  /____\  \   /  /_/  \ /  /   /  //  /_/  \            *
+  |_____|/__/  \__\  |__|    |__| \__\/__/      \__\ /________//__/   /__//________/            *
+
+*/ ?>
+   ______ ___  ___ __________ ______       ____       ____   ___   ___ ____                     *
+  |  ___| \  \/  /|___   ___||   __  \    /    \     |  __ \|  |  |  ||  __ \                   *
+  |  |__   \    /    |  |    |  |__| |   /  /\  \    | /_/ /|  |__|  || /_/ /                   *
+  |  ___|  /    \    |  |    |      /   /  /__\  \   |  __ \|   __   ||  __ \                   *
+  |  |__  /  /\  \   |  |    |  |\  \  /   ____   \  | /_/ /|  |  |  || /_/ /                   *
+  |_____|/__/  \__\  |__|    |__| \__\/__/      \__\ |____/ |__|  |__||____/                    *
+                                                                                                *
+-------------------------------------------------------------------------------------------------
+  Engineered & Designed by Thaer Aldwaik <t_dwaik@hotmail.com>                                  *
+------------------------------------------------------------------------------------------------>
+
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Extra BHP, Cars Enthusiasts Community">
-    <meta name="author" content="Thaer Aldwaik">
-    <meta property="og:type" content="website" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Extra BHP, Cars Enthusiasts Community" />
+    <meta name="author" content="Thaer Aldwaik" />
+    <meta name="fb:app_id" content="1959489680985703" />
 
-    <base href="/">
+    <base href="/" />
 
     <title>Extra BHP</title>
 
+    <?php if($config['env'] == 'prod') { ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111472015-1"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-111472015-1'); </script>
-
+    <?php } ?>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />

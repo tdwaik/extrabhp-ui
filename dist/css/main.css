@@ -38,8 +38,8 @@ img {
   padding: 11px 15px;
 }
 #mainNav {
-  background-color: #111;
-  color: #FFF;
+  background-color: #FFF;
+  color: #333;
   border-color: rgba(34, 34, 34, 0.05);
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
@@ -50,7 +50,7 @@ img {
 #mainNav .navbar-header .navbar-brand {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
-  color: #FFF;
+  color: #333;
   font-weight: 500;
 }
 #mainNav .navbar-header .navbar-brand:hover,
@@ -63,14 +63,14 @@ img {
   border: none;
 }
 #mainNav .navbar-toggle:focus {
-  background-color: #191919;
+  background-color: #FFF;
 }
 #mainNav .nav > li > a {
   font-family: Lato, Helvetica, Arial, sans-serif;
 }
 #mainNav .nav > li > a,
 #mainNav .nav > li > a:focus {
-  color: #FFF;
+  color: #333;
 }
 #mainNav .nav > li > a:hover,
 #mainNav .nav > li > a:focus:hover {
@@ -78,7 +78,7 @@ img {
 }
 #mainNav .nav > li.active > a,
 #mainNav .nav > li.active > a:focus {
-  color: #f44d3c !important;
+  color: #333;
   background-color: transparent;
 }
 #mainNav .nav > li.active > a:hover,
@@ -106,19 +106,19 @@ img {
     color: #FFF;
   }
   #mainNav.affix {
-    background-color: #111;
+    background-color: #FFF;
     border-color: rgba(34, 34, 34, 0.1);
   }
   #mainNav.affix .navbar-header .navbar-brand {
-    color: #FFF;
+    color: #333;
   }
   #mainNav.affix .navbar-header .navbar-brand:hover,
   #mainNav.affix .navbar-header .navbar-brand:focus {
-    color: #FFF;
+    color: #f44d3c;
   }
   #mainNav.affix .nav > li > a,
   #mainNav.affix .nav > li > a:focus {
-    color: #FFF;
+    color: #333;
   }
   #mainNav.affix .nav > li > a:hover,
   #mainNav.affix .nav > li > a:focus:hover {
@@ -278,9 +278,6 @@ footer p {
 }
 .modal {
   color: #000;
-}
-#cars-timeline-v2 {
-  margin-top: 20px;
 }
 #cars-timeline {
   margin-top: 230px;

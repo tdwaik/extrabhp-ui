@@ -1,6 +1,7 @@
 node_modules
 bower_components
 package-lock.json
+config.ini
 
 # Editors files
 .idea/

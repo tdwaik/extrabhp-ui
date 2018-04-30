@@ -11,8 +11,13 @@
 body {
     .body-font;
     padding-top: 43px;
-    //background-color: #F8F8F8;
+    //background-color: #f8f9fa !important; //#F8F8F8;
     //color: #fff;
+    //box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.main-view-container .container {
+    //background-color: #FFF;
 }
 
 a {
@@ -59,14 +64,14 @@ img {
 #mainNav .navbar-brand {height: auto; padding: 11px 15px;}
 
 #mainNav {
-    background-color: @nav-black;
-    color: #FFF;
+    background-color: #FFF; //@nav-black;
+    color: #333;//#FFF;
     border-color: fade(@gray-darker, 5%);
     .transition-all;
     .heading-font;
     .navbar-header .navbar-brand {
         .heading-font;
-        color: #FFF;//@theme-primary;
+        color: #333; //#FFF;//@theme-primary;
         font-weight: 500;
         &:hover,
         &:focus {
@@ -79,7 +84,7 @@ img {
         border: none;
     }
     .navbar-toggle:focus {
-        background-color: #191919;
+        background-color: #FFF; //#191919;
     }
     .nav {
         > li {
@@ -90,7 +95,7 @@ img {
             }
             > a,
             > a:focus {
-                color: #FFF;//@gray-darker;
+                color: #333; //#FFF;//@gray-darker;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -98,7 +103,7 @@ img {
             &.active {
                 > a,
                 > a:focus {
-                    color: @theme-primary !important;
+                    color: #333; //@theme-primary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -125,18 +130,18 @@ img {
             }
         }
         &.affix {
-            background-color: @nav-black;
+            background-color: #FFF; //@nav-black;
             border-color: fade(@gray-darker, 10%);
             .navbar-header .navbar-brand {
-                color: #FFF;//@theme-primary;
+                color: #333; //#FFF;//@theme-primary;
                 &:hover,
                 &:focus {
-                    color: #FFF;//@theme-primary;
+                    color: @theme-primary;
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: #FFF;//@gray-darker;
+                color: #333; //#FFF;//@gray-darker;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -599,9 +604,9 @@ footer {
     color: #000;
 }
 
-#cars-timeline-v2 {
-    margin-top: 20px;
-}
+//#cars-timeline-v2 {
+//    margin-top: 20px;
+//}
 
 #cars-timeline {
     margin-top: 230px;

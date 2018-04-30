@@ -13,7 +13,7 @@ RewriteCond %{HTTP_HOST} !^extrabhp\.com
 RewriteCond %{HTTP_HOST} !^dev\.extrabhp\.com
 RewriteRule ^(.*) https://extrabhp.com [R=301,L,QSA]
 
-RewriteCond %{REQUEST_URI} ^\/less\/.*|^\/app\/.*|^\/\..*|^\/gulpfile.js|^\/package.json|^\/package-lock.json
+RewriteCond %{REQUEST_URI} ^\/less\/.*|^\/app\/.*|^\/\..*|^\/gulpfile\.js|^\/package\.json|^\/package-lock\.json|^\/config\.ini.*
 RewriteRule ^(.+) / [R=404,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f

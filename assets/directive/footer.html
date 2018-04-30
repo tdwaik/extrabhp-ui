@@ -58,7 +58,7 @@
 </footer>
 
 <!-- Feedback Modal -->
-<a href="#feedback" role="button" class="btn btn-success" data-toggle="modal" style="position: fixed; right: 0; bottom: 0;"><strong>Feedback?</strong></a>
+<button href="#feedback" role="button" class="btn btn-success" data-toggle="modal" style="position: fixed; right: 0; bottom: 0;"><strong>Feedback?</strong></button>
 <div id="feedback" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
@@ -76,7 +76,7 @@
 						</div>
 						<div class="form-group">
 							<label for="feedback-content">Feedback:</label>
-							<textarea id="feedback-content" class="form-control" rows="3" ng-model="feedback.content" minlength="3" placeholder="I'll read every single feedback" required selected></textarea>
+							<textarea id="feedback-content" class="form-control" rows="3" ng-model="feedback.content" minlength="3" placeholder="I'll read every single feedback :)" required></textarea>
 						</div>
 						<div class="row" ng-if="!feedback.showThankYou">
 							<div class="col-xs-2" ng-if="!feedback.submitFailure">
