@@ -55,7 +55,7 @@ img {
 }
 #mainNav .navbar-header .navbar-brand:hover,
 #mainNav .navbar-header .navbar-brand:focus {
-  color: #e6e6e6;
+  color: #000;
 }
 #mainNav .navbar-header .navbar-toggle {
   font-size: 20px;
