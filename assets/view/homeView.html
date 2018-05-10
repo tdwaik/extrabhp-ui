@@ -1,104 +1,44 @@
-<header class="masthead">
-    <img ng-src="/img/bg/engine-wallpaper-5.jpg" />
-    <div class="container h-100">
-        <div class="row h-100" ng-init="init()">
-            <div class="col-sm-12 my-auto">
-                <div class="header-content mx-auto">
-                    <div class="header-content-inner">
-                        <!--<h1>The Best Car for you from a Petrolhead view:</h1>-->
-                        <h1>Let me help you choose your car:</h1>
-                        <!--<a href="#download" class="btn btn-outline btn-xl page-scroll">Start Now for Free!</a>-->
+<div id="homeView">
+    <div id="petrolhead-101-shortcut" class="shortcut">
+        <div class="content-row">
+            <div class="container">
+                <div class="col-xs-12 text-center">
+                    <h3>Petrolhead <span class="text-primary">101</span></h3>
+                    <h6>The first step to stop being a Human and become a Petrolhead!</h6>
+                    <br />
+                    <a href="/petrolhead-101" target="_parent" class="btn btn-dark">More ></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <div ng-if="result == null">
-                            <h3>{{question.question}}</h3>
+    <div id="what-car-shortcut" class="shortcut">
+        <div class="content-row">
+            <div class="container">
+                <div class="col-xs-12 text-center">
+                    <h3>Let me help you choose your car ?</h3>
+                    <br />
+                    <a href="/best-car-for-u" target="_parent" class="btn btn-dark">Looking for a car ></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                            <div ng-if="loading == true" class="loader"></div>
-                            <div ng-if="loading == false">
-                                <span ng-if="question.type != 'multiple_choice'">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item" ng-repeat="answer in question.answers">
-                                            <a class="btn btn-outline btn-xl js-scroll-trigger" ng-click="submitAnswer(question.name, answer.value)">{{answer.answer}}</a>
-                                        </li>
-                                    </ul>
-                                </span>
-
-                                <span ng-if="question.type == 'multiple_choice'">
-                                    <span ng-repeat="answer in question.answers">
-                                        <input type="checkbox" id="{{answer.value}}" ng-model="checkboxModel[answer.value]" class="btn btn-outline btn-xl js-scroll-trigger" /><label for="{{answer.value}}">{{answer.answer}}</label>
-                                    </span>
-                                    <a class="btn btn-outline btn-xl js-scroll-trigger" ng-if="getCheckedBoxesValue() != ''" ng-click="submitCheckboxModel(question.name)">Next</a>
-                                </span>
-
-                                <span ng-if="showBack()">
-                                    <a class="btn btn-outline btn-xl js-scroll-trigger" ng-click="back()">Back</a>
-                                </span>
-                            </div>
-
-                        </div>
-                        <div ng-if="result != null">
-                            <div ng-if="loading == true" class="loader"></div>
-                            <div ng-if="loading == false">
-                                <h3>{{result}}</h3>
-
-                                <div ng-if="isHelpful.show" class="is-helpfull">
-                                    <h3>Is this answer helpful?</h3>
-                                    <div ng-if="isHelpful.loading">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item"><div class="loader-small"></div></li>
-                                        </ul>
-                                    </div>
-                                    <div ng-if="!isHelpful.loading">
-                                        <a class="btn btn-default btn-l" ng-click="isHelpful.send(1)">Yes</a>
-                                        <a class="btn btn-default btn-l" ng-click="isHelpful.send(0)">No!</a>
-                                    </div>
-                                </div>
-
-                                <div ng-if="feedback.show">
-                                    <p>Any feedback is appreciated?</p>
-                                    <div ng-if="feedback.loading">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item"><div class="loader-small"></div></li>
-                                        </ul>
-                                    </div>
-                                    <div class="row">
-                                        <form name="feedbackForm" class="col-md-6 col-md-offset-3" ng-if="!feedback.loading" ng-submit="feedback.send()">
-                                            <textarea class="form-control" ng-model="feedback.value" placeholder="Any Feedback?" required></textarea>
-                                            <input type="submit" value="Send" class="btn btn-default btn-l" />
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <div ng-if="showThanks"><p>Thanks!</p></div>
-
-                                <br />
-                                <a class="btn btn-outline btn-xl js-scroll-trigger" ng-click="tryAgain()">Start Again</a>
-                            </div>
-                        </div>
+    <div id="cars-timeline-shortcut" class="shortcut">
+        <div class="content-row">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 mt-4">
+                        <h3>Cars Time-line</h3>
+                        <h6>Time-line for the best cars in history</h6>
+                        <br />
+                        <a href="/cars-timeline" target="_parent" class="btn btn-dark">More ></a>
+                    </div>
+                    <div class="col-lg-6 order-1 text-center">
+                        <img ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Benz-1.jpg/677px-Benz-1.jpg" alt="" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
-
-<div>
-    <div class="container">
-        <div class="col-xs-12 text-center" style="padding: 40px 0;">
-            <h2>Petrolhead <span class="text-primary">101</span></h2>
-            <h5>The first step to stop being a Human and become a Petrolhead!</h5>
-            <br />
-            <a href="/petrolhead-101" target="_parent" class="btn btn-default">More ></a>
-        </div>
-    </div>
 </div>
-
-<!--<div class="row">-->
-    <!--<div class="container">-->
-        <!--<div class="col-xs-12 text-center" style="padding: 40px 0;">-->
-            <!--<h2>Cars Time-line</h2>-->
-            <!--<h5>Time-line of best cars through history</h5>-->
-            <!--<br />-->
-            <!--<a href="/cars-timeline" target="_parent" class="btn btn-default">More ></a>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->

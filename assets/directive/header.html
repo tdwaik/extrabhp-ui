@@ -1,35 +1,64 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <i class="fa fa-bars"></i>
-            </button>
-            <div><a class="navbar-brand page-scroll" href="/" target="_parent">Extra BHP</a></div>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="/petrolhead-101" target="_parent">Petrolhead <span class="text-primary">101</span></a>
+        <a class="navbar-brand js-scroll-trigger" href="/" target="_parent">Extra BHP</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/petrolhead-101" target="_parent">Petrolhead <span class="text-primary">101</span></a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="/cars-timeline" target="_parent">Cars Timeline</a>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/cars-timeline" target="_parent">Cars Timeline</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="/about" target="_parent">About</a>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/best-car-for-u" target="_parent">Best car for you</a>
                 </li>
-                <!--<li>-->
-                    <!--<a class="page-scroll" href="" data-toggle="modal" data-target="#contact-us-modal">Contact</a>-->
-                <!--</li>-->
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/about" target="_parent">About</a>
+                </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
-
 </nav>
+
+<!--<nav id="mainNav2" class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="container">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+                <!--<i class="fa fa-bars"></i>-->
+            <!--</button>-->
+            <!--<div><a class="navbar-brand page-scroll" href="/" target="_parent">Extra BHP</a></div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li>-->
+                    <!--<a class="page-scroll" href="/petrolhead-101" target="_parent">Petrolhead <span class="text-primary">101</span></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a class="page-scroll" href="/cars-timeline" target="_parent">Cars Timeline</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a class="page-scroll" href="/best-car-for-u" target="_parent">Best car for you</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a class="page-scroll" href="/about" target="_parent">About</a>-->
+                <!--</li>-->
+                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="page-scroll" href="" data-toggle="modal" data-target="#contact-us-modal">Contact</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+
+<!--</nav>-->
 
 <!--&lt;!&ndash; Contact Modal &ndash;&gt;-->
 <!--<div id="contact-us-modal" class="modal fade" role="dialog">-->
@@ -67,12 +96,24 @@
             $('.navbar-toggle:visible').click();
         });
 
-        // Offset for Main Navigation
-        $('#mainNav').affix({
-            offset: {
-                top: (window.location.pathname === '/')? 50 : -1
+//        // Offset for Main Navigation
+//        $('#mainNav').affix({
+//            offset: {
+//                top: (window.location.pathname === '/')? 50 : -1
+//            }
+//        });
+
+        // Collapse Navbar
+        var navbarCollapse = function() {
+            var top = (window.location.pathname === '/best-car-for-u')? 50 : -1;
+            if ($("#mainNav").offset().top > top) {
+                $("#mainNav").addClass("navbar-shrink");
+            } else {
+                $("#mainNav").removeClass("navbar-shrink");
             }
-        });
+        };
+        // Collapse now if page is not at top
+        navbarCollapse();
 
     })(jQuery);
 </script>

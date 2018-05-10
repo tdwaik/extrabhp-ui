@@ -1,8 +1,9 @@
-<div class="container">
+<div class="container mt-4">
     <div class="row">
-        <div class="col-lg-12 mx-auto">
-            <h3 class="text-center">About Extra BHP</h3>
-            <p class="col-md-6 col-md-offset-3 text-center">Extra BHP is a website for Car Enthusiasts, totally free to use and enjoy.</p>
+        <div class="col-lg-12 mx-auto text-center">
+            <h4>About Extra BHP</h4>
+            <p class="col-md-6 offset-md-3">A website for Car Enthusiasts, totally free to use and enjoy.</p>
+            <p>Follow me: <a href="https://www.facebook.com/extrabhp/" target="_blank"><i class="fab fa-facebook"></i></a></p>
         </div>
     </div>
 </div>
@@ -20,9 +21,8 @@
 <!--</div>-->
 <div class="container">
     <div class="row">
-        <h3 class="text-center">Contact Me</h3>
-
-        <form class="col-md-6 col-md-offset-3" ng-submit="contact.submit()">
+        <form class="col-md-6 offset-md-3" ng-submit="contact.submit()">
+            <h4 class="text-center">Contact Me</h4>
             <div class="form-group">
                 <div class="form-group">
                     <label for="contact-email">Email:</label>
@@ -32,7 +32,7 @@
                     <label for="contact-content">Message:</label>
                     <textarea id="contact-content" class="form-control" rows="5" placeholder="I'll read every message :)" ng-model="contact.content" minlength="3" required></textarea>
                 </div>
-                <div class="row">
+                <div class="form-group">
                     <div class="col-xs-2" ng-if="!contact.submitFailure">
                         <input type="submit" class="btn btn-success" Value="Send" ng-disabled="contact.loading" />
                     </div>
@@ -52,6 +52,4 @@
             </div>
         </form>
     </div>
-
-    <!--<p class="lead mb-5 text-center">Follow Me: <a href="https://www.facebook.com/extrabhp/" target="_blank"><i class="fab fa-facebook"></i></a></p>-->
 </div>

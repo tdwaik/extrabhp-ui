@@ -5,6 +5,8 @@ app.controller('carsTimelineController', ['$scope', 'carsTimelineService', funct
 
     $scope.loading = true;
     $scope.timelineDate = null;
+    $scope.timelineByYear = {};
+    $scope.timelineYears = [];
 
     $scope.isTimelineDate = function(date, updateTimelineDate) {
         if($scope.timelineDate === null) {
@@ -19,6 +21,20 @@ app.controller('carsTimelineController', ['$scope', 'carsTimelineService', funct
     $scope.init = function() {
         carsTimelineService.getTimeline().then(function(response) {
             $scope.timeline = response.data;
+
+            angular.forEach($scope.timeline, function(car) {
+                var year = car.productionDate.substr(- 4);
+                if($scope.timelineYears.indexOf(year) < 0) {
+                    $scope.timelineYears.push(year);
+                }
+                if($scope.timelineByYear[year] === undefined) {
+                    $scope.timelineByYear[year] = [];
+                }
+                $scope.timelineByYear[year].push(car);
+            });
+
+            console.log($scope.timelineByYear);
+
             $scope.loading = false;
         }, function (response) {
             //alerts.oops();

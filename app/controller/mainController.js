@@ -22,14 +22,14 @@ app.controller('mainController', [
     };
 
     $rootScope.$on("$locationChangeStart", function() {
-        $(window).off('.affix');
-        $('#mainNav').removeData('bs.affix').removeClass('affix affix-top affix-bottom');
-
-        $('#mainNav').affix({
-            offset: {
-                top: ($location.path() === '/')? 50 : -1
-            }
-        });
+        // $(window).off('.affix');
+        // $('#mainNav').removeData('bs.affix').removeClass('affix affix-top affix-bottom');
+        //
+        // $('#mainNav').affix({
+        //     offset: {
+        //         top: ($location.path() === '/')? 50 : -1
+        //     }
+        // });
     });
 
     $rootScope.scrollTo = function (to) {

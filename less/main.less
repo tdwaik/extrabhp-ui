@@ -1,31 +1,43 @@
 @import "variables.less";
 @import "mixins.less";
 
-//// Global Components
-//html,
-//body {
-//    height: 100%;
-//    width: 100%;
-//}
-
 body {
     .body-font;
-    padding-top: 43px;
-    //background-color: #f8f9fa !important; //#F8F8F8;
-    //color: #fff;
-    //box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    font-size: 14px;
+    padding-top: 37px;
+}
+@media (min-width: 768px) {
+    body {
+        padding-top: 40px;
+    }
 }
 
 .main-view-container .container {
     //background-color: #FFF;
 }
 
+//@media (min-width: 1200px) {
+//    .container {
+//        max-width: 1170px;
+//    }
+//}
+
+p {
+    font-size: .85rem;
+}
+
 a {
     //.transition-all;
+    color: #337ab7;
     &:hover,
     &:focus {
+        color: #23527c;
         text-decoration: none;
     }
+}
+
+.btn {
+    font-size: 14px;
 }
 
 //hr {
@@ -59,51 +71,59 @@ img {
 }
 
 // Navigation
-#mainNav .navbar-nav > li > a {padding-top:11px !important; padding-bottom:11px !important;}
-#mainNav {min-height:32px !important}
-#mainNav .navbar-brand {height: auto; padding: 11px 15px;}
+//#mainNav .navbar-nav > li > a { padding-top: 0 !important; padding-bottom: 0 !important;}
+#mainNav {
+    min-height:32px !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+//#mainNav .navbar-brand {height: auto; padding: 11px 15px;}
 
 #mainNav {
-    background-color: #FFF; //@nav-black;
-    color: #333;//#FFF;
-    border-color: fade(@gray-darker, 5%);
+    background-color: #FFF !important; //@nav-black;
+    color: #333 !important;//#FFF;
+    //border: none;
+    //border-color: fade(@gray-darker, 5%);
     .transition-all;
     .heading-font;
-    .navbar-header .navbar-brand {
+    .navbar-brand {
         .heading-font;
-        color: #333; //#FFF;//@theme-primary;
+        color: #333 !important; //#FFF;//@theme-primary;
         font-weight: 500;
+        font-size: 1.18em;
         &:hover,
         &:focus {
-            color: #000; //darken(#FFF, 10%);
+            color: #000 !important; //darken(#FFF, 10%);
         }
     }
-    .navbar-header .navbar-toggle {
+    .navbar-toggler {
         font-size: 20px;
         padding: 0;
         border: none;
     }
-    .navbar-toggle:focus {
-        background-color: #FFF; //#191919;
+    .navbar-toggler:focus {
+        background-color: #FFF !important; //#191919;
     }
-    .nav {
+    .navbar-nav {
         > li {
             > a {
                 font-family: Lato,Helvetica,Arial,sans-serif;
                 //font-size: 11px;
                 //font-weight: bold;
+                padding-right: 0.7em;
+                padding-left: 0.7em;
             }
             > a,
             > a:focus {
-                color: #333; //#FFF;//@gray-darker;
+                color: #333 !important; //#FFF;//@gray-darker;
                 &:hover {
-                    color: @theme-primary;
+                    color: @theme-primary !important;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: #333; //@theme-primary !important;
+                    color: #333 !important; //@theme-primary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -112,66 +132,95 @@ img {
             }
         }
     }
+    &.navbar-shrink {
+        background-color: #FFF !important; //@nav-black;
+        border-bottom: solid 1px fade(@gray-darker, 10%);
+    }
     @media (min-width: 768px) {
         background-color: transparent;
         border-color: transparent;
-        .navbar-header .navbar-brand {
-            color: fade(#FFF, 70%);
+        .navbar-brand {
+            color: #333 !important;
             &:hover,
             &:focus {
-                color: #FFF;
+                color: @theme-primary !important;
             }
         }
-        .nav > li > a,
-        .nav > li > a:focus {
-            color: fade(#FFF, 70%);
+        .navbar-nav > li > a,
+        .navbar-nav > li > a:focus {
+            color: #333 !important;
             &:hover {
-                color: #FFF;
+                color: @theme-primary !important;
             }
         }
-        &.affix {
-            background-color: #FFF; //@nav-black;
-            border-color: fade(@gray-darker, 10%);
-            .navbar-header .navbar-brand {
-                color: #333; //#FFF;//@theme-primary;
+        &.navbar-shrink {
+            background-color: #FFF !important; //@nav-black;
+            border-bottom: solid 1px fade(@gray-darker, 10%);
+            .navbar-brand {
+                color: #333 !important; //#FFF;//@theme-primary;
                 &:hover,
                 &:focus {
                     color: @theme-primary;
                 }
             }
-            .nav > li > a,
-            .nav > li > a:focus {
-                color: #333; //#FFF;//@gray-darker;
+            .navbar-nav > li > a,
+            .navbar-nav > li > a:focus {
+                color: #333 !important; //#FFF;//@gray-darker;
                 &:hover {
-                    color: @theme-primary;
+                    color: @theme-primary !important;
                 }
             }
         }
     }
 }
 
-// Homepage Header
+// Home view
+#homeView {
+    .content-row {
+        padding: 70px 0;
+    }
+    img {
+        max-width: 100%;
+    }
 
+    #petrolhead-101-shortcut {
+        overflow: hidden;
+        color: #FFF;
+        background: url("/img/bg/engine-wallpaper-5.jpg") center;
+
+        .content-row {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 1rem 0;
+        }
+    }
+    #cars-timeline-shortcut {
+        background-color: #F1F1F1;
+    }
+}
+
+// what car Header
 header {
     position: relative;
     width: 100%;
-    min-height: auto;
+    //min-height: auto;
     overflow: hidden;
     color: #FFF;
     background-color: rgba(0, 0, 0, 0.8);
     margin-top: -43px;
-    //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), @theme-secondary; /* fallback for old browsers */
-    //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    //background: url("../img/5e487c8509d8586866427ea4d165e5f8.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    //background: url("/img/bg/5e487c8509d8586866427ea4d165e5f8.jpg") center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    //background: url("http://eskipaper.com/images/mclaren-4.jpg") center no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     img {
         position: absolute;
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
-        //margin: -50px auto auto -70px;
     }
 
     //color: #FFF;
@@ -181,13 +230,7 @@ header {
         position: relative;
         .header-content-inner {
             position: relative;
-            //max-width: 500px;
             margin: 0 auto;
-            //h1 {
-            //    margin-top: 0;
-            //    margin-bottom: 30px;
-            //    font-size: 30px;
-            //}
             .list-badges {
                 margin-bottom: 25px;
                 img {
@@ -234,169 +277,6 @@ header {
     //}
 }
 
-//// Sections
-//
-//section {
-//    padding: 100px 0;
-//    h2 {
-//        font-size: 50px;
-//    }
-//}
-//
-//section.download {
-//    padding: 150px 0;
-//    position: relative;
-//    h2 {
-//        margin-top: 0;
-//        font-size: 50px;
-//    }
-//    .badges {
-//        .badge-link {
-//            display: block;
-//            margin-bottom: 25px;
-//            &:last-child {
-//                margin-bottom: 0;
-//            }
-//            img {
-//                height: 60px;
-//            }
-//            @media(min-width: 768px) {
-//                display: inline-block;
-//                margin-bottom: 0;
-//            }
-//        }
-//    }
-//    @media(min-width: 768px) {
-//        h2 {
-//            font-size: 70px;
-//        }
-//    }
-//}
-//
-//section.features {
-//    .section-heading {
-//        h2 {
-//            margin-top: 0;
-//        }
-//        p {
-//            margin-bottom: 0;
-//        }
-//        margin-bottom: 100px;
-//    }
-//    .device-container,
-//    .feature-item {
-//        max-width: 300px;
-//        margin: 0 auto;
-//    }
-//    .device-container {
-//        margin-bottom: 100px;
-//        @media(min-width: 992px) {
-//            margin-bottom: 0;
-//        }
-//    }
-//    .feature-item {
-//        text-align: center;
-//        margin-bottom: 100px;
-//        h3 {
-//            font-size: 30px;
-//        }
-//        i {
-//            font-size: 80px;
-//              background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
-//              background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
-//              -webkit-background-clip: text;
-//              -webkit-text-fill-color: transparent;
-//        }
-//    }
-//    @media(min-width: 992px) {
-//        .device-container,
-//        .feature-item {
-//            max-width: none;
-//        }
-//    }
-//}
-//
-//section.cta {
-//    position: relative;
-//    .background-cover;
-//    background-position: center;
-//    background-image: url('/img/bg-cta.jpg');
-//    padding: 250px 0;
-//    .cta-content {
-//        position: relative;
-//        z-index: 1;
-//        h2 {
-//            margin-top: 0;
-//            margin-bottom: 25px;
-//            color: #FFF;
-//            max-width: 450px;
-//            font-size: 50px;
-//        }
-//        @media (min-width: 768px) {
-//            h2 {
-//                font-size: 80px;
-//            }
-//        }
-//    }
-//    .overlay {
-//        height: 100%;
-//        width: 100%;
-//        background-color: fade(black, 50%);
-//        position: absolute;
-//        top: 0;
-//        left: 0;
-//    }
-//}
-//
-//section.contact {
-//    text-align: center;
-//    h2 {
-//        margin-top: 0;
-//        margin-bottom: 25px;
-//        i {
-//            color: @brand-google-plus;
-//        }
-//    }
-//    ul.list-social {
-//        margin-bottom: 0;
-//        li {
-//            a {
-//                display: block;
-//                height: 80px;
-//                width: 80px;
-//                line-height: 80px;
-//                font-size: 40px;
-//                border-radius: 100%;
-//                color: #FFF;
-//            }
-//            &.social-twitter {
-//                a {
-//                    background-color: @brand-twitter;
-//                    &:hover {
-//                        background-color: darken(@brand-twitter, 5%);
-//                    }
-//                }
-//            }
-//            &.social-facebook {
-//                a {
-//                    background-color: @brand-facebook;
-//                    &:hover {
-//                        background-color: darken(@brand-facebook, 5%);
-//                    }
-//                }
-//            }
-//            &.social-google-plus {
-//                a {
-//                    background-color: @brand-google-plus;
-//                    &:hover {
-//                        background-color: darken(@brand-google-plus, 5%);
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
-
 footer {
     background-color: #f2f2f2;
     padding: 20px 0;
@@ -440,16 +320,9 @@ footer {
         font-size: 20px;
     }
 }
-//// Bootstrap Overrides
-//
-//.bg-primary {
-//    background: @theme-primary;
-//    background: -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
-//    background: linear-gradient(@theme-primary , darken(@theme-primary, 5%));
-//}
-//
+
 .text-primary {
-    color: @theme-primary;
+    color: @theme-primary !important;
 }
 //
 //.no-gutter > [class*='col-'] {
@@ -484,33 +357,6 @@ footer {
     }
 }
 
-//// Extras
-//// -- Highlight Color Customization
-//::-moz-selection {
-//    color: #FFF;
-//    text-shadow: none;
-//    background: @gray-darker;
-//}
-//
-//::selection {
-//    color: #FFF;
-//    text-shadow: none;
-//    background: @gray-darker;
-//}
-//
-//img::selection {
-//    color: #FFF;
-//    background: transparent;
-//}
-//
-//img::-moz-selection {
-//    color: #FFF;
-//    background: transparent;
-//}
-//
-//body {
-//    webkit-tap-highlight-color: @gray-darker;
-//}
 
 .loader {
     border: 7px solid #f3f3f3; /* Light grey */
@@ -535,63 +381,7 @@ footer {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-//.portfolio {
-//    padding: 0 0 !important;
-//}
-//.portfolio-box {
-//    position:relative;
-//    display:block;
-//    max-width:650px;
-//    margin:0 auto;
-//    height: 260px;
-//}
-//.portfolio-box .portfolio-box-caption {
-//    position:absolute;
-//    bottom:0;
-//    display:block;
-//    width:100%;
-//    height:100%;
-//    text-align:center;
-//    opacity:0;
-//    color:#fff;
-//    background:rgba(240,95,64,.9);
-//    -webkit-transition:all .2s;
-//    -moz-transition:all .2s;
-//    transition:all .2s
-//}
-//.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-//    position:absolute;
-//    top:50%;
-//    width:100%;
-//    transform:translateY(-50%);
-//    text-align:center
-//}
-//.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-//    padding:0 15px;
-//    font-family:'Open Sans','Helvetica Neue',Arial,sans-serif
-//}
-//.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-//    font-size:14px;
-//    font-weight:600;
-//    text-transform:uppercase
-//}
-//.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-//    font-size:18px
-//}
-//.portfolio-box:hover .portfolio-box-caption {
-//    opacity:1
-//}
-//.portfolio-box:focus {
-//    outline:0
-//}
-//@media (min-width:768px) {
-//    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-//        font-size:16px
-//    }
-//    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-//        font-size:22px
-//    }
-//}
+
 .img-fluid {
     width: 100%;
     height: 100%;
@@ -603,10 +393,6 @@ footer {
 .modal {
     color: #000;
 }
-
-//#cars-timeline-v2 {
-//    margin-top: 20px;
-//}
 
 #cars-timeline {
     margin-top: 230px;
