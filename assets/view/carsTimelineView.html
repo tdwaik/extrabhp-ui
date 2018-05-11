@@ -2,7 +2,7 @@
 <div class="container" ng-init="init()">
 
 
-        <div ng-if="loading == true" class="loader"></div>
+        <div ng-if="loading == true" class="loader mt-3 mb-3"></div>
         <div ng-if="loading == false" class="row timeline" ng-repeat="year in timelineYears track by $index" ng-mouseover="shareFB(car)" id="e-{{$index}}">
 
             <hr class="d-sm-none" />
