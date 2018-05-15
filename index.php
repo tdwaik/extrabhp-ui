@@ -36,6 +36,7 @@
     <meta name="description" content="Extra BHP, Cars Enthusiasts Community" />
     <meta name="author" content="Thaer Aldwaik" />
     <meta name="fb:app_id" content="1959489680985703" />
+    <meta name="theme-color" content="#000" />
 
     <base href="/" />
 
