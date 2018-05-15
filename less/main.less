@@ -80,42 +80,42 @@ img {
 //#mainNav .navbar-brand {height: auto; padding: 11px 15px;}
 
 #mainNav {
-    background-color: #FFF !important; //@nav-black;
-    color: #333 !important;//#FFF;
+    background-color: #000 !important; //@nav-black;
+    color: #FFF !important;//#FFF;
     //border: none;
     //border-color: fade(@gray-darker, 5%);
     .transition-all;
     .heading-font;
     .navbar-brand {
         .heading-font;
-        color: #333 !important; //#FFF;//@theme-primary;
-        font-weight: 500;
-        font-size: 1.18em;
+        color: #FFF !important; //#FFF;//@theme-primary;
+        //font-weight: 500;
+        //font-size: 1.18em;
         &:hover,
         &:focus {
             color: #000 !important; //darken(#FFF, 10%);
         }
     }
     .navbar-toggler {
-        font-size: 20px;
+        //font-size: 20px;
         padding: 0;
         border: none;
     }
     .navbar-toggler:focus {
-        background-color: #FFF !important; //#191919;
+        background-color: #000 !important; //#191919;
     }
     .navbar-nav {
         > li {
             > a {
-                font-family: Lato,Helvetica,Arial,sans-serif;
-                //font-size: 11px;
+                //font-family: Lato,Helvetica,Arial,sans-serif;
+                font-size: 1rem;
                 //font-weight: bold;
                 padding-right: 0.7em;
                 padding-left: 0.7em;
             }
             > a,
             > a:focus {
-                color: #333 !important; //#FFF;//@gray-darker;
+                color: #FFF !important; //#FFF;//@gray-darker;
                 &:hover {
                     color: @theme-primary !important;
                 }
@@ -123,7 +123,7 @@ img {
             &.active {
                 > a,
                 > a:focus {
-                    color: #333 !important; //@theme-primary !important;
+                    color: #FFF !important; //@theme-primary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -133,14 +133,14 @@ img {
         }
     }
     &.navbar-shrink {
-        background-color: #FFF !important; //@nav-black;
+        background-color: #000 !important; //@nav-black;
         border-bottom: solid 1px fade(@gray-darker, 10%);
     }
     @media (min-width: 768px) {
         background-color: transparent;
         border-color: transparent;
         .navbar-brand {
-            color: #333 !important;
+            color: #FFF !important;
             &:hover,
             &:focus {
                 color: @theme-primary !important;
@@ -148,16 +148,16 @@ img {
         }
         .navbar-nav > li > a,
         .navbar-nav > li > a:focus {
-            color: #333 !important;
+            color: #FFF !important;
             &:hover {
                 color: @theme-primary !important;
             }
         }
         &.navbar-shrink {
-            background-color: #FFF !important; //@nav-black;
+            background-color: #000 !important; //@nav-black;
             border-bottom: solid 1px fade(@gray-darker, 10%);
             .navbar-brand {
-                color: #333 !important; //#FFF;//@theme-primary;
+                color: #FFF !important; //#FFF;//@theme-primary;
                 &:hover,
                 &:focus {
                     color: @theme-primary;
@@ -165,7 +165,7 @@ img {
             }
             .navbar-nav > li > a,
             .navbar-nav > li > a:focus {
-                color: #333 !important; //#FFF;//@gray-darker;
+                color: #FFF !important; //#FFF;//@gray-darker;
                 &:hover {
                     color: @theme-primary !important;
                 }
