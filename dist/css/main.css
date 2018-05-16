@@ -160,7 +160,7 @@ img {
 #homeView #petrolhead-101-shortcut h6 {
   margin: 1rem 0;
 }
-#homeView #cars-timeline-shortcut {
+#homeView #what-car-shortcut {
   background-color: #F1F1F1;
 }
 header {
@@ -217,23 +217,32 @@ header .device-container {
   margin: 100px auto 0;
 }
 footer {
-  background-color: #f2f2f2;
+  background-color: #263238;
   padding: 20px 0;
 }
 footer p {
   font-size: 12px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: #cfd8dc;
 }
 .quote-banner {
-  background-color: #2F2F2F;
+  background-color: #EEE;
   padding: 20px 0 15px 0;
-  color: #FFF;
+  color: #000;
 }
 .quote-banner .quote {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+}
+.quote-banner a,
+.quote-banner a:hover,
+.quote-banner a:active {
+  color: #000;
+}
+.quote-banner .fa-facebook-f {
+  font-size: 1.3em;
+  color: #337ab7;
+  font-weight: normal;
 }
 .quote-banner ul {
   margin-bottom: 0;
