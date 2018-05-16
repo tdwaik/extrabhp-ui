@@ -8,7 +8,7 @@
   font-weight: 200;
 }
 .body-font {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', 'Lato', sans-serif;
 }
 .alt-font {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -16,7 +16,7 @@
   letter-spacing: 2px;
 }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', 'Lato', sans-serif;
   font-size: 14px;
   padding-top: 37px;
 }
@@ -60,6 +60,7 @@ img {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   color: #000 !important;
+  font-weight: 300;
 }
 #mainNav .navbar-brand:hover,
 #mainNav .navbar-brand:focus {
@@ -74,6 +75,7 @@ img {
 }
 #mainNav .navbar-nav > li > a {
   font-size: 1rem;
+  font-weight: 300;
   padding-right: 0.7em;
   padding-left: 0.7em;
 }
