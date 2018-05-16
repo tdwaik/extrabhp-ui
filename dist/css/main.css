@@ -38,6 +38,7 @@ a:focus {
 }
 .btn {
   font-size: 14px;
+  font-weight: 400;
 }
 img {
   max-width: 100%;
@@ -234,7 +235,7 @@ footer p {
 }
 .quote-banner .quote {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .quote-banner a,
 .quote-banner a:hover,
