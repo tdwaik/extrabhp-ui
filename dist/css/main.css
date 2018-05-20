@@ -58,7 +58,7 @@ img {
 #mainNav .navbar-brand {
   font-weight: 200;
   color: #000 !important;
-  font-weight: 300;
+  font-weight: 400;
 }
 #mainNav .navbar-brand:hover,
 #mainNav .navbar-brand:focus {
@@ -73,7 +73,7 @@ img {
 }
 #mainNav .navbar-nav > li > a {
   font-size: .9rem;
-  font-weight: 300;
+  font-weight: 400;
   padding-right: 0.7em;
   padding-left: 0.7em;
 }
