@@ -8,6 +8,8 @@ app.controller('carsTimelineController', ['$scope', 'carsTimelineService', funct
     $scope.timelineByYear = {};
     $scope.timelineYears = [];
 
+    var retryCount = 2;
+
     $scope.isTimelineDate = function(date, updateTimelineDate) {
         if($scope.timelineDate === null) {
             if(updateTimelineDate) $scope.timelineDate = date;
@@ -37,7 +39,7 @@ app.controller('carsTimelineController', ['$scope', 'carsTimelineService', funct
 
             $scope.loading = false;
         }, function (response) {
-            //alerts.oops();
+            if(retryCount-- > 0) $scope.init();
         });
     };
 

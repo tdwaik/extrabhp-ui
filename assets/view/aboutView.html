@@ -1,36 +1,28 @@
 <div class="container mt-4">
     <div class="row">
-        <div class="col-lg-12 mx-auto text-center">
-            <h4>About Extra BHP</h4>
-            <p class="col-md-6 offset-md-3">A website for Car Enthusiasts, totally free to use and enjoy.</p>
-            <p>Follow me: <a href="https://www.facebook.com/extrabhp/" target="_blank"><i class="fab fa-facebook"></i></a></p>
+        <div class="col-lg-6 mx-auto text-center">
+            <h5>Extra BHP</h5>
+            <h6>Is a place for Car Enthusiasts, a random thoughts of a petrolhead.</h6>
+            <!-- <p>Follow <a href="https://www.facebook.com/extrabhp/" target="_blank"><i class="fab fa-facebook"></i></a></p> -->
         </div>
     </div>
 </div>
-<hr />
-<!--<div class="container-fluid" id="contact-faqs">-->
-    <!--<div class="container text-center">-->
-        <!--<div class="row">-->
-            <!--<div class="col-md-8 col-md-offset-2">-->
-                <!--<h3>FAQ's</h3>-->
-                <!--<p>Is buying an electric cars a good idea? Yes, especially if you have another car, it's the future, no fuel cost, low maintenance cost</p>-->
-                <!--<p>Is it a good idea to buying an Expensive car with a cheep price when it's get old? No, it'll kill you with maintenance costs</p>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<div class="container">
+
+<div class="container mt-4">
     <div class="row">
         <form class="col-md-6 offset-md-3" ng-submit="contact.submit()">
-            <h4 class="text-center">Contact Me</h4>
+            <h5 class="text-center">Contact Me</h5>
             <div class="form-group">
                 <div class="form-group">
-                    <label for="contact-email">Email:</label>
+                    <label for="contact-email">Email</label>
                     <input type="email" id="contact-email" class="form-control" ng-model="contact.email" maxlength="100" required />
                 </div>
                 <div class="form-group">
-                    <label for="contact-content">Message:</label>
-                    <textarea id="contact-content" class="form-control" rows="5" placeholder="I'll read every message :)" ng-model="contact.content" minlength="3" required></textarea>
+                    <label for="contact-content">Message</label>
+                    <textarea id="contact-content" class="form-control" rows="5" ng-model="contact.content" minlength="3" required></textarea>
+                </div>
+                <div>
+                    <p class="small text-muted">We will never SPAM you with unwanted emails. We respect your privacy and will never share your email address with any person or organization.</p>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-2" ng-if="!contact.submitFailure">
@@ -43,10 +35,10 @@
                         <div class="loader-small"></div>
                     </div>
                     <div class="col-xs-4" ng-if="contact.showThankYou">
-                        <p style="color: green;"><i class="fas fa-check"></i> sent success</p>
+                        <p style="color: green;"><i class="fas fa-check"></i> Sent successfully</p>
                     </div>
                     <div class="col-xs-6" ng-if="contact.submitFailure">
-                        <p style="color: orangered;"><i class="fas fa-exclamation"></i> something went wrong :(</p>
+                        <p style="color: orangered;"><i class="fas fa-exclamation"></i> Something went wrong :(</p>
                     </div>
                 </div>
             </div>

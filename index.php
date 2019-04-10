@@ -1,13 +1,17 @@
 <?php $config = parse_ini_file('config.ini'); ?>
-<?php /*
-<!-----------------------------------------------------------------------
-      _______ ___  ___   __________ ______    ____           _____     ___    ___ _____         *
-      /  ____/ \  \/  /  /___   ___//  ___ \  /    \         /  __  \  /  /   /  //  __ \       *
-     /  /___    \    /      /  /   /  /__/ / /  /\  \       /  /_/  / /  /___/  //  /_/ /       *
-    /  ____/    /    \     /  /   /  /  __/ /  /__\  \     /  __  /  /  /___/  //  __ /         *
-   /  /___     /  /\  \   /  /   /  /  \   /  ______  \   /  /_/  \ /  /   /  //  /             *
-  /______/    /__/  \__\ /__/   /__/ \__\ /__/      \__\ /________//__/   /__//__/              *
 
+<?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome')) { ?>
+<!-------------------------------------------------------------------------------
+*   ______ ___  ___ __________ ______       ____       ____   ___   ___ ____    *
+*  |  ___| \  \/  /|___   ___||   __  \    /    \     |  __ \|  |  |  ||  __ \  *
+*  |  |__   \    /    |  |    |  |__| |   /  /\  \    | /_/ /|  |__|  || /_/ /  *
+*  |  ___|  /    \    |  |    |      /   /  /__\  \   |  __ \|   __   ||   _/   *
+*  |  |__  /  /\  \   |  |    |  |\  \  /   ____   \  | /_/ /|  |  |  ||  |     *
+*  |_____|/__/  \__\  |__|    |__| \__\/__/      \__\ |____/ |__|  |__||__|     *
+*                                                                               *
+-------------------------------------------------------------------------------->
+<?php } ?>
+<?php /* 
 
    ______ ___  ___ __________ ______       ____           _____     ___    ___ ____             *
   |  ___| \  \/  /|___   ___||   __  \    /    \         /  __  \  /  /   /  //  __ \           *
@@ -18,13 +22,21 @@
    ______ ___  ___ __________ ______       ____       ____   ___   ___ ____                     *
   |  ___| \  \/  /|___   ___||   __  \    /    \     |  __ \|  |  |  ||  __ \                   *
   |  |__   \    /    |  |    |  |__| |   /  /\  \    | /_/ /|  |__|  || /_/ /                   *
-  |  ___|  /    \    |  |    |      /   /  /__\  \   |  __ \|   __   ||   _/                     *
+  |  ___|  /    \    |  |    |      /   /  /__\  \   |  __ \|   __   ||   _/                    *
   |  |__  /  /\  \   |  |    |  |\  \  /   ____   \  | /_/ /|  |  |  ||  |                      *
   |_____|/__/  \__\  |__|    |__| \__\/__/      \__\ |____/ |__|  |__||__|                      *
-                                                                                                *
+
+  *       _______ ___  ___   __________ ______    ____           _____     ___    ___ _____        *
+*      /  ____/ \  \/  /  /___   ___//  ___ \  /    \         /  __  \  /  /   /  //  __ \       *
+*     /  /___    \    /      /  /   /  /__/ / /  /\  \       /  /_/  / /  /___/  //  /_/ /       *
+*    /  ____/    /    \     /  /   /  /  __/ /  /__\  \     /  __  /  /  /___/  //  __ /         *
+*   /  /___     /  /\  \   /  /   /  /  \   /  ______  \   /  /_/  \ /  /   /  //  /             *
+*  /______/    /__/  \__\ /__/   /__/ \__\ /__/      \__\ /________//__/   /__//__/              *
+*                                                                                                *
+
 */ ?>
 <!-----------------------------------------------------------------------
-*    Engineered & Designed by Thaer Aldwaik, t_dwaik@hotmail.com        *
+*    Engineered & Designed by Thaer Aldwaik, tdwaik@hotmail.com        *
 ------------------------------------------------------------------------>
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
@@ -32,11 +44,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Extra BHP, Cars Enthusiasts Community" />
     <meta name="author" content="Thaer Aldwaik" />
     <meta name="fb:app_id" content="1959489680985703" />
-    <meta name="theme-color" content="#000" />
+    <!-- <meta name="theme-color" content="#000" /> -->
 
     <base href="/" />
 
@@ -49,11 +61,11 @@
     <?php } ?>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Artifika|Lato|Muli|Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
 
     <!-- Theme CSS -->
     <link type="text/css" href="/dist/css/main.min.css" rel="stylesheet" />
@@ -81,8 +93,6 @@
 
     <page-footer></page-footer>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -94,7 +104,10 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- libs -->
     <script src="/dist/js/lib/underscore/underscore-min.js"></script>

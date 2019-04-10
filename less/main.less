@@ -4,23 +4,20 @@
 body {
     .body-font;
     font-size: 14px;
-    padding-top: 37px;
+    padding-top: 54px;
 }
 @media (min-width: 768px) {
     body {
-        padding-top: 40px;
+        padding-top: 54px;
     }
 }
 
-.main-view-container .container {
-    //background-color: #FFF;
+@media(min-width: 1200px) {
+    .container {
+        width: 90%;
+        max-width: calc(1600px + 10%);
+    }
 }
-
-//@media (min-width: 1200px) {
-//    .container {
-//        max-width: 1170px;
-//    }
-//}
 
 p {
     font-size: .85rem;
@@ -41,69 +38,32 @@ a {
     font-weight: 500 !important;
 }
 
-//hr {
-//    max-width: 100px;
-//    margin: 25px auto 0;
-//    border-width: 1px;
-//    border-color: fade(@gray-darker, 10%);
-//}
-//
-//hr.light {
-//    border-color: #FFF;
-//}
-//
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    //.heading-font;
-}
-//
-//p {
-//    font-size: 18px;
-//    line-height: 1.5;
-//    margin-bottom: 20px;
-//}
-
 img {
     max-width: 100%;
 }
 
 // Navigation
-//#mainNav .navbar-nav > li > a { padding-top: 0 !important; padding-bottom: 0 !important;}
 #mainNav {
-    min-height:32px !important;
-    padding-top: 1px !important;
-    padding-bottom: 1px !important;
-}
-//#mainNav .navbar-brand {height: auto; padding: 11px 15px;}
-
-#mainNav {
-    background-color: #FFF !important; //@nav-black;
-    color: #000 !important;//#FFF;
-    //border: none;
-    //border-color: fade(@gray-darker, 5%);
+    //background-color: #FFF !important; //@nav-black;
+    //color: #000 !important;//#FFF;
     .transition-all;
     .heading-font;
     .navbar-brand {
         .heading-font;
-        color: #000 !important; //#FFF;//@theme-primary;
+        //color: #000 !important; //#FFF;//@theme-primary;
         font-weight: 400;
         font-size: 1.1rem;
         &:hover,
         &:focus {
-            color: #000 !important; //darken(#FFF, 10%);
+          //  color: #000 !important; //darken(#FFF, 10%);
         }
     }
     .navbar-toggler {
         //font-size: 20px;
         padding: 0;
-        border: none;
     }
     .navbar-toggler:focus {
-        background-color: #FFF !important; //#191919;
+     //   background-color: #FFF !important; //#191919;
     }
     .navbar-nav {
         > li {
@@ -116,7 +76,7 @@ img {
             }
             > a,
             > a:focus {
-                color: #000 !important; //#FFF;//@gray-darker;
+          //      color: #000 !important; //#FFF;//@gray-darker;
                 &:hover {
                     color: @theme-primary !important;
                 }
@@ -124,55 +84,61 @@ img {
             &.active {
                 > a,
                 > a:focus {
-                    color: #000 !important; //@theme-primary !important;
+                //    color: #000 !important; //@theme-primary !important;
                     background-color: transparent;
                     &:hover {
-                        background-color: transparent;
+                 //       background-color: transparent;
                     }
                 }
             }
         }
     }
     &.navbar-shrink {
-        background-color: #FFF !important; //@nav-black;
-        border-bottom: solid 1px fade(@gray-darker, 10%);
+     //   background-color: #FFF !important; //@nav-black;
+      //  border-bottom: solid 1px fade(@gray-darker, 10%);
     }
     @media (min-width: 768px) {
-        background-color: transparent;
-        border-color: transparent;
+      //  background-color: transparent;
+      //  border-color: transparent;
         .navbar-brand {
-            color: #000 !important;
+      //      color: #000 !important;
             &:hover,
             &:focus {
-                color: @theme-primary !important;
+        //        color: @theme-primary !important;
             }
         }
         .navbar-nav > li > a,
         .navbar-nav > li > a:focus {
-            color: #000 !important;
+      //      color: #000 !important;
             &:hover {
-                color: @theme-primary !important;
+      //          color: @theme-primary !important;
             }
         }
         &.navbar-shrink {
-            background-color: #FFF !important; //@nav-black;
-            border-bottom: solid 1px fade(@gray-darker, 10%);
+         //   background-color: #FFF !important; //@nav-black;
+          //  border-bottom: solid 1px fade(@gray-darker, 10%);
             .navbar-brand {
-                color: #000 !important; //#FFF;//@theme-primary;
+          //      color: #000 !important; //#FFF;//@theme-primary;
                 &:hover,
                 &:focus {
-                    color: @theme-primary;
+            //        color: @theme-primary;
                 }
             }
             .navbar-nav > li > a,
             .navbar-nav > li > a:focus {
-                color: #000 !important; //#FFF;//@gray-darker;
+             //   color: #000 !important; //#FFF;//@gray-darker;
                 &:hover {
-                    color: @theme-primary !important;
+             //       color: @theme-primary !important;
                 }
             }
         }
     }
+}
+
+.masthead {
+    height: 100vh;
+    padding: 0;
+    background-color: #6C757D;
 }
 
 // Home view
@@ -279,14 +245,15 @@ header {
 }
 
 footer {
-    background-color: #263238;
-    padding: 20px 0;
-    //background-color: @nav-black;
-    //text-align: center;
-    p {
-        font-size: 12px;
-        margin: 0;
-        color: #cfd8dc;
+    background-color: #FCFCFC;
+    color: #202121;
+    a, a:hover, a:active {
+        color: #000;
+    }
+    .fa-facebook {
+        font-size: 1.5em;
+        color: #337ab7;
+        font-weight: normal;
     }
 }
 .feedback-btn {
@@ -294,38 +261,7 @@ footer {
     right: 0;
     bottom: 0;
 }
-.quote-banner {
-    background-color: #EEE;
-    padding: 20px 0 15px 0;
-    color: #000;
-    .quote {
-        font-size: 16px;
-        font-weight: 500;
-    }
-    a, a:hover, a:active {
-        color: #000;
-    }
-    .fa-facebook-f {
-        font-size: 1.3em;
-        color: #337ab7;
-        font-weight: normal;
-    }
-    ul {
-        margin-bottom: 0;
-        li {
-            a {
-                font-size: 12px;
-                color: #333;
-                &:hover,
-                &:focus,
-                &:active,
-                &.active {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-}
+
 .follow-banner {
     padding: 10px 0;
     i {
@@ -337,11 +273,6 @@ footer {
 .text-primary {
     color: @theme-primary !important;
 }
-//
-//.no-gutter > [class*='col-'] {
-//    padding-right:0;
-//    padding-left:0;
-//}
 
 // Button Styles
 .header-content {
@@ -408,93 +339,10 @@ footer {
 }
 
 #cars-timeline {
-    margin-top: 230px;
-    .timeline ul li {
-        list-style-type: none;
-        position: relative;
-        width: 2px;
-        margin: -200px auto 15px auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: #E0E0E0;
-    }
 
-    .timeline ul li::after {
-        //content: '';
-        position: absolute;
-        //left: 50%;
-        top: 10px;
-        transform: translateX(-50%);
-        //width: 30px;
-        //height: 30px;
-        //border-radius: 50%;
-        //background: inherit;
-        background-color: #FFF;
-        font-weight: bold;
-        color: #000;
-    }
-
-    .timeline ul li div.timeline-element {
-        position: relative;
-        bottom: 0;
-        width: 400px;
-        padding: 8px;
-        background: #FFF;
-        border: solid 1px #E0E0E0;
-        border-radius: 4px;
-    }
-
-    .timeline ul li div.timeline-element::before, div.timeline-element::after {
-        content: '';
-        position: absolute;
-        top: 7px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-    }
-
-    .timeline ul li:nth-child(even) div.timeline-element {
-        left: 45px;
-    }
-
-    .timeline ul li:nth-child(even) div.timeline-element::before {
-        left: -17px;
-        border-width: 8px 16px 8px 0;
-        border-color: transparent #E0E0E0 transparent transparent;
-    }
-
-    .timeline ul li:nth-child(even) div.timeline-element::after {
-        left: -15px;
-        border-width: 8px 16px 8px 0;
-        border-color: transparent #FFF transparent transparent;
-    }
-
-    .timeline ul li:nth-child(odd) div.timeline-element {
-        left: -439px;
-    }
-
-    .timeline ul li:nth-child(odd) div.timeline-element::before {
-        right: -17px;
-        border-width: 8px 0 8px 16px;
-        border-color: transparent transparent transparent #E0E0E0;
-    }
-
-    .timeline ul li:nth-child(odd) div.timeline-element::after {
-        right: -15px;
-        border-width: 8px 0 8px 16px;
-        border-color: transparent transparent transparent #FFF;
-    }
-
-    .timeline ul li img {
-        width: 100%;
-    }
-
-    @media screen and (max-width: 900px) {
-        .timeline ul li div.timeline-element {
-            width: 250px;
-        }
-        .timeline ul li:nth-child(odd) div.timeline-element {
-            left: -289px; /*250+45-6*/
+    .timeline-element {
+        img {
+            max-width: 100%;
         }
     }
 
@@ -594,20 +442,11 @@ footer {
 
 .nav-side-menu {
     overflow: auto;
-    //font-family: verdana;
     font-size: 12px;
-    font-weight: 200;
-    //background-color: #2e353d;
-    //position: fixed;
-    //top: 0px;
-    //width: 250px;
-    //height: 100%;
-    //color: #e1ffff;
     z-index: 1;
 
     .list-group-item {
         padding: 0;
-        //font-weight: bold;
         color: #333;
         border: none;
     }
@@ -705,13 +544,17 @@ footer {
     background-color: #f5f5f5;
 }
 @media (max-width: 767px) {
+    .toggle-btn-d {
+        display: none;
+    }
+
     .nav-side-menu {
         position: relative;
         width: 100%;
     }
     .nav-side-menu .toggle-btn {
         display: inline-block;
-        //cursor: pointer;
+        cursor: pointer;
         //position: absolute;
         //left: 0;
         //top: 10px;
@@ -733,6 +576,10 @@ footer {
     .nav-side-menu .menu-list .menu-content {
         display: block;
     }
+    .toggle-btn {
+        display: none;
+    }
+
 }
 
 a.anchor {

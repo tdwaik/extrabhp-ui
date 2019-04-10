@@ -6,3 +6,4 @@ config.ini
 # Editors files
 .idea/
 .vscode/
+sftp-config.json

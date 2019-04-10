@@ -1,34 +1,28 @@
-<div id="quote-banner" class="quote-banner">
+<!-- Footer -->
+<footer class="footer mt-auto py-4">
 	<div class="container">
 		<div class="row quote">
 			<div class="col-sm-11 col-10">
-				<span>Life's too short to drive a slow car</span>
+				<h6>LIFE'S TOO SHORT TO DRIVE BORING CARS!</h6>
 			</div>
 			<div class="col-sm-1 col-2 text-center">
 				<a href="https://www.facebook.com/extrabhp/" target="_blank">
-					<i class="fab fa-facebook-f"></i>
+					<i class="fab fa-facebook"></i>
 				</a>
 			</div>
 		</div>
-	</div>
-	<!-- /.container -->
-</div>
-<!-- /.banner -->
 
-<!-- Footer -->
-<footer>
-	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<p class="copyright small">Disclaimer: All images are copyright to their respective owners.</p>
-				<p class="copyright small">&copy; Extra BHP <span id="copyright-year"></span></p>
+				<p class="copyright small text-muted">Disclaimer: All images are copyright to their respective owners.
+				<br />&copy; <a href="/">Extra BHP</a></p>
 			</div>
 		</div>
 	</div>
 </footer>
 
 <!-- Feedback Modal -->
-<button href="#feedback" role="button" class="btn btn-info feedback-btn" data-toggle="modal">Feedback?</button>
+<button href="#feedback" role="button" class="btn btn-dark feedback-btn" data-toggle="modal">Feedback?</button>
 <!-- The Modal -->
 <div class="modal" id="feedback">
 	<div class="modal-dialog">
@@ -36,7 +30,7 @@
 
 			<!-- Modal Header -->
 			<div class="modal-header">
-				<h5 class="modal-title">Send Feedback</h5>
+				<h5 class="modal-title">Send us feedback</h5>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 
@@ -45,12 +39,15 @@
 				<form ng-submit="feedback.submit()">
 					<div class="form-group">
 						<div class="form-group">
-							<label for="feedback-email">Email:</label>
-							<input type="email" id="feedback-email" class="form-control" placeholder="(Optional)" ng-model="feedback.email" maxlength="100" />
+							<label for="feedback-email">Email</label>
+							<input type="email" id="feedback-email" class="form-control" ng-model="feedback.email" maxlength="100" required autofocus />
 						</div>
 						<div class="form-group">
-							<label for="feedback-content">Feedback:</label>
-							<textarea id="feedback-content" class="form-control" rows="3" ng-model="feedback.content" minlength="3" placeholder="I'll read every single feedback :)" required></textarea>
+							<label for="feedback-content">Feedback</label>
+							<textarea id="feedback-content" class="form-control" rows="3" ng-model="feedback.content" minlength="3"  required></textarea>
+						</div>
+						<div>
+							<p class="small text-muted">We will never SPAM you with unwanted emails. We respect your privacy and will never share your email address with any person or organization.</p>
 						</div>
 						<div class="form-group" ng-if="!feedback.showThankYou">
 							<div class="col-xs-2" ng-if="!feedback.submitFailure">
@@ -64,19 +61,14 @@
 							</div>
 						</div>
 						<div ng-if="feedback.showThankYou">
-							<p style="color: green;"><i class="fas fa-check"></i> Thanks for the feedback :)</p>
+							<p style="color: green;"><i class="fas fa-check"></i> Thank you</p>
 						</div>
 						<div ng-if="feedback.submitFailure">
-							<p style="color: orangered;"><i class="fas fa-exclamation"></i> something went wrong :(</p>
+							<p style="color: orangered;"><i class="fas fa-exclamation"></i> Something went wrong :(</p>
 						</div>
 					</div>
 				</form>
 			</div>
-
-			<!--&lt;!&ndash; Modal footer &ndash;&gt;-->
-			<!--<div class="modal-footer">-->
-				<!--<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
-			<!--</div>-->
 
 		</div>
 	</div>
