@@ -55,15 +55,15 @@ img {
 }
 #mainNav .navbar-brand {
   font-weight: 200;
-  font-weight: 400;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 #mainNav .navbar-toggler {
   padding: 0;
 }
 #mainNav .navbar-nav > li > a {
-  font-size: 1em;
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 500;
   padding-right: 0.7em;
   padding-left: 0.7em;
 }
@@ -74,8 +74,6 @@ img {
 #mainNav .navbar-nav > li.active > a,
 #mainNav .navbar-nav > li.active > a:focus {
   background-color: transparent;
-}
-@media (min-width: 768px) {
 }
 .masthead {
   height: 100vh;
@@ -174,6 +172,15 @@ footer .fa-facebook {
   color: #337ab7;
   font-weight: normal;
 }
+footer .btn-link {
+  color: #f44d3c;
+  padding: 0;
+  text-decoration: none;
+}
+footer .btn-link:hover {
+  color: #f44d3c;
+  text-decoration: none;
+}
 .feedback-btn {
   position: fixed;
   right: 0;
@@ -243,6 +250,11 @@ footer .fa-facebook {
 }
 .petrolhead-101 .row {
   margin-bottom: 10px;
+}
+.petrolhead-101 iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 316px;
 }
 .modal {
   color: #000;
@@ -354,19 +366,6 @@ footer .fa-facebook {
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*
-      .collapsed{
-         .arrow:before{
-                   font-family: FontAwesome;
-                   content: "\f053";
-                   display: inline-block;
-                   padding-left:10px;
-                   padding-right: 10px;
-                   vertical-align: middle;
-                   float:right;
-              }
-       }
-  */
 }
 .nav-side-menu ul :not(collapsed) .arrow:before,
 .nav-side-menu li :not(collapsed) .arrow:before {
