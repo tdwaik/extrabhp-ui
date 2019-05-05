@@ -55,6 +55,7 @@ img {
 }
 #mainNav .navbar-brand {
   font-weight: 200;
+  color: #212529;
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -62,6 +63,7 @@ img {
   padding: 0;
 }
 #mainNav .navbar-nav > li > a {
+  color: #495057;
   font-size: 1.1em;
   font-weight: 500;
   padding-right: 0.7em;
@@ -74,11 +76,6 @@ img {
 #mainNav .navbar-nav > li.active > a,
 #mainNav .navbar-nav > li.active > a:focus {
   background-color: transparent;
-}
-.masthead {
-  height: 100vh;
-  padding: 0;
-  background-color: #6C757D;
 }
 #homeView .content-row {
   padding: 70px 0;
@@ -106,11 +103,13 @@ img {
   background-color: #F1F1F1;
 }
 header {
+  height: 100vh;
+  padding: 0;
+  background-color: #e9ecef;
   position: relative;
   width: 100%;
   overflow: hidden;
-  color: #FFF;
-  background-color: rgba(0, 0, 0, 0.8);
+  color: #212529;
   margin-top: -43px;
   min-height: 95%;
 }
@@ -168,9 +167,7 @@ footer a:active {
   color: #000;
 }
 footer .fa-facebook {
-  font-size: 1.5em;
-  color: #337ab7;
-  font-weight: normal;
+  font-size: 1.6em;
 }
 footer .btn-link {
   color: #f44d3c;
@@ -180,6 +177,11 @@ footer .btn-link {
 footer .btn-link:hover {
   color: #f44d3c;
   text-decoration: none;
+}
+footer #copyright,
+footer #copyright a {
+  background-color: #383d41;
+  color: #adb5bd;
 }
 .feedback-btn {
   position: fixed;
@@ -247,6 +249,9 @@ footer .btn-link:hover {
 .img-fluid {
   width: 100%;
   height: 100%;
+}
+.petrolhead-101 .main-title {
+  background-color: #f8f9fa;
 }
 .petrolhead-101 .row {
   margin-bottom: 10px;

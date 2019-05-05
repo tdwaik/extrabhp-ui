@@ -48,6 +48,7 @@ img {
     .heading-font;
     .navbar-brand {
         .heading-font;
+        color: #212529;
         font-weight: 600;
         font-size: 1.2rem;
     }
@@ -56,7 +57,8 @@ img {
     }
     .navbar-nav {
         > li {
-            > a {    
+            > a {
+                color: #495057;
                 font-size: 1.1em;
                 font-weight: 500;
                 padding-right: 0.7em;
@@ -78,12 +80,6 @@ img {
     }
     @media (min-width: 768px) {
     }
-}
-
-.masthead {
-    height: 100vh;
-    padding: 0;
-    background-color: #6C757D;
 }
 
 // Home view
@@ -120,12 +116,13 @@ img {
 
 // what car Header
 header {
+    height: 100vh;
+    padding: 0;
+    background-color: #e9ecef;
     position: relative;
     width: 100%;
-    //min-height: auto;
     overflow: hidden;
-    color: #FFF;
-    background-color: rgba(0, 0, 0, 0.8);
+    color: #212529;
     margin-top: -43px;
 
     img {
@@ -196,9 +193,7 @@ footer {
         color: #000;
     }
     .fa-facebook {
-        font-size: 1.5em;
-        color: #337ab7;
-        font-weight: normal;
+        font-size: 1.6em;
     }
     .btn-link {
         color: @theme-primary;
@@ -208,6 +203,10 @@ footer {
             color: @theme-primary;
             text-decoration: none;
         }
+    }
+    #copyright, #copyright a {
+        background-color: #383d41;
+        color: #adb5bd;
     }
 }
 .feedback-btn {
@@ -285,6 +284,9 @@ footer {
     height: 100%;
 }
 .petrolhead-101 {
+    .main-title {
+        background-color: #f8f9fa;
+    }
      .row {
         margin-bottom: 10px;
     }
@@ -299,13 +301,11 @@ footer {
 }
 
 #cars-timeline {
-
     .timeline-element {
         img {
             max-width: 100%;
         }
     }
-
 }
 
 @media screen and (max-width: 600px) {
